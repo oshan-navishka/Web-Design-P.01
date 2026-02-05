@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>List</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+
+</head>
+<body>
+    <!--What are the List Type HTML-->
+      <!--  01.Ordered List
+        02.UnOrdered List
+        03.Description List
+        04.Nested List  -->
+
+    <!--////////////////////////////////////// Ordered List //////////////////////////////////////-->
+        <!--            Ordered List -> <ol></ol>
+                        List Item ->  <li></li>                         -->
+
+<ol>
+    <li>Java</li>
+    <li>Python</li>   <!--list ekak hadana widha 1 idan patan ganne -->
+    <li>C++</li>
+    <li>C#</li>
+    <li>Perl</li>
+</ol>
+
+    <hr>
+
+    <ol start="5">
+        <li>Java</li>
+        <li>Python</li>   <!--list ekak hadana widha 5 idan patan ganne -->
+        <li>C++</li>
+        <li>C#</li>
+        <li>Perl</li>
+    </ol>
+
+    <hr>
+
+    <ol type="a" start="24">   <!--Patan ganna type eka a, A, I, oya wage mkend patan ganne kiyala balanne mehema    [type eka a, Strat wenne 24 weni english akure idn ]-->
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>C#</li>
+        <li>Perl</li>
+    </ol>
+
+    <hr>
+
+    <ol type="A"> <!--type eka 'A'-->
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>C#</li>
+        <li>Perl</li>
+    </ol>
+
+    <hr>
+
+    <ol type="I">  <!--type eka 'I'-->
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>C#</li>
+        <li>Perl</li>
+    </ol>
+
+    <hr>
+
+    <ol type="i">   <!--type eka 'i'-->
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>C#</li>
+        <li>Perl</li>
+    </ol>
+
+    <hr>
+
+    <ol type="1"> <!--type eka '1'-->
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>C#</li>
+        <li>Perl</li>
+    </ol>
+    <hr>
+
+    <!--////////////////////////////////////// Unordered List //////////////////////////////////////-->
+       <!--             Unordered List  -> <ul></ul>
+                        List Item  ->  <li></li>                    -->
+
+<ul>
+    <li>Java</li>
+    <li>Python</li>
+    <li>C++</li>
+    <li>C#</li>
+    <li>Perl</li>
+</ul>
+
+<ul type="circle"> <!--  meyageth type thunak thiye [circle, disc, square]   -->
+    <li>Java</li>
+    <li>Python</li>
+    <li>C++</li>
+    <li>C#</li>
+    <li>Perl</li>
+</ul>
+
+    <ul type="circle">  <!-- circle type -->
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>C#</li>
+        <li>Perl</li>
+    </ul>
+
+    <hr>
+
+    <ul type="disc">    <!--default type eka balanne desc-->
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>C#</li>
+        <li>Perl</li>
+    </ul>
+
+    <hr>
+
+    <ul type="square">   <!--square type-->
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>C#</li>
+        <li>Perl</li>
+    </ul>
+
+    <hr>
+
+    <!--////////////////////////////////////// Description List //////////////////////////////////////-->
+    <!--             description List  -> <dl></dl>
+                     description title / term ->  <dt></dt>
+                     description detail ->  <dd></dd>>                    -->
+
+   <!--    HTML eka yatathe e gana visthrayak description ekak watenne mehama      -->
+<dl>
+    <dt> HTML </dt>
+    <dd>HTML is the basic building in awebsite. </dd>
+
+    <dt>CSS</dt>
+    <dd>We use the build the representing of a website.</dd>
+</dl>
+    <hr>
+
+    <!--////////////////////////////////////// Nested List //////////////////////////////////////-->
+    <!--         List eka athule thawa list ekak thiyana eka thamai nested list kiyanne          -->
+
+<ol>
+    <li>Java
+    <ul type="circle">
+        <li>Day01
+        <ul>
+            <li>hii</li>
+            <li>bye</li>
+            <li>tata</li>
+        </ul></li>
+        <li>Day02</li>
+        <li>Day03</li>
+    </ul></li>
+    <li>C++
+    <ul>
+        <li>Lession 01</li>
+        <li>Lession 02</li>
+        <li>Lession 03</li>
+    </ul></li>
+    <li>Python</li>
+    <li>C#</li>
+</ol>
+
+    <hr>
+
+   <!-- ///////////////////////////////////////  Task 01 ////////////////////////////////////// -->
+
+<ol>
+    <li>Sri Lanka</li>
+    <li>India
+    <ol type="a" start="5">
+        <li>Western India
+        <ul type="square">
+            <li>Goa</li>
+            <li>Gujarat
+            <ul type="disc">
+                <li>Area 1</li>
+                <li>Area 2</li>
+                <li>Area 3</li>
+                <li>Area 4</li>
+            </ul></li>
+        </ul>
+        </li>
+        <li>Eastern India</li>
+        <li>Northern India</li>
+        <li>Southern India
+        <ul type="circle">
+            <li>Kerala</li>
+            <li>Chennai</li>
+        </ul></li>
+    </ol></li>
+</ol>
+
+    <hr>
+
+    <!-- ///////////////////////////////////////  Task 02 ////////////////////////////////////// -->
+
+    <ol>
+        <li>Sri Lanka</li>
+        <li>India
+            <ol type="a" start="5">
+                <li><u>Western India</u>
+
+                    <p>Welcome to <b>Western India</b></p>
+
+                    <ul type="square">
+                        <li>Goa</li>
+                        <br>
+                        <p>Most <i>beautiful</i> area in the world</p>
+                        <br>
+                        <li>Gujarat
+                            <ul type="disc">
+                                <li>Area 1</li>
+                                <li><mark>Area 2</mark></li>
+                                <li>Area 3</li>
+                                <li>Area 4</li>
+                            </ul></li>
+                    </ul>
+                </li>
+                <li>Eastern India</li>
+                <li>Northern India</li>
+                <li>Southern India
+                    <ul type="circle">
+                        <li>Kerala</li>
+                        <li><h1>Chennai</h1></li>
+                    </ul></li>
+            </ol></li>
+    </ol>
+
+    <hr>
+
+
+</body>
+</html>
