@@ -15,6 +15,7 @@
 
 <form>
     <input type="text">     <!--text field ekak-->
+    <input type="number">     <!--number field ekak-->
     <input type="button" value="click me!">     <!--buttom ekak-->
     <input type="checkbox">     <!--checkbox ekak-->
     <input type="radio">     <!--radio button ekak-->
@@ -48,8 +49,148 @@
     <input type="submit" value="Submit!">  <!--Submit buttom ekak nam use karanne me button eka-->
     <input type="reset" value="Reset!">    <!--Reset karanna oni nm  use karanne me button eka  eg- fill karapu form ekak-->
 
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+
+<form action="13_html_back_end.html" method="post"> <!--email ps hri nm back end page eka use karanwa  | past kiyana attribute eken wenne url eke email ps pennana eka nathi karanwa-->
+    <div>
+        <h1 style="color: blueviolet">Sing In</h1>
+        <!--lable kiyala kiyanne aduna ganna dnne api email nm email kiyala dnwa ekata for kiyna attribute eka use karanna
+        oni ekata type ekata id ekak dla e id eken thamai use karanne-->
+
+        <div>
+            <label for="email-input" style="color: darkslategrey"> Email: </label>
+            <br>
+            <input type="email" id="email-input" name="email-name">  <!--name kiyana attribute ekan thma data save karaganne email eke email eka mkkd kiyala-->
+        </div>
+
+        <div>
+            <label for="password-input" style="color: darkslategrey"> Password: </label>
+            <br>
+            <input type="password" id="password-input" name="password-name"> <!--name kiyana attribute ekan thma data save karaganne email eke passwaord eka mkkd kiyala-->
+        </div>
+
+        <br>
+        <input type="submit" value="Sign In" style="color: darkslategrey">
+        <input type="reset" value="Reset!" style="color: darkslategrey">
+    </div>
 
 </form>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<hr>
+<hr>
+<hr>
+
+<form>
+    <div>
+        <label for="student-id"> Student ID: </label>
+        <br>
+        <input type="text" id="student-id" name="st-id" placeholder="E.g:- S001">
+    </div>
+
+    <div>
+        <label for="first-name-id"> Fist name: </label>
+        <br>
+        <input type="text" id="first-name-id" name="fist-name" placeholder="E.g:- Oshan">
+    </div>
+
+
+    <div>
+        <label for="last-name-id"> Last name: </label>
+        <br>
+        <input type="text" id="last-name-id" name="last-name" placeholder="E.g:- Navishka">
+    </div>
+
+   <div>
+       <label for="dob-id"> DOB: </label>
+       <br>
+       <input type="date" id="dob-id" name="date-of-birth">
+   </div>
+
+    <div>
+        <label for="age-id"> Age: </label>
+        <br>
+        <input type="text" id="age-id" name="age" placeholder="E.g:- 23">
+    </div>
+
+   <div>
+       <label for="address-id"> Address </label>
+       <br>
+       <!--<input type="text" id="address-id" name="address" placeholder="E.g:- Rathnapura">-->
+       <textarea id="address-id" name="address" placeholder="E.g:- Rathnapura" cols="50" rows="10"></textarea>
+       <!--address walata dnne textarea kiyala-->  <!--placeholder dnne coml eka thule example data ekak pennanan-->
+   </div>
+
+    <div>
+        <br>
+        <label for="program-id"></label>
+        <br>
+        <select id="program-id">   <!--Option thoranna denne mehema-->
+            <option>CMJD</option>
+            <option>HDSE</option>
+            <option>BSc - University of Greater Manchester</option>
+            <option>BSc - Lincol University Collage</option>
+            <option>PGD - Immersive Software Engineering</option>
+            <option>PGD - Data Science</option>
+            <option>PGD - AI</option>
+        </select>
+    </div>
+
+    <div>
+        <br>
+        <label for="program-id2"></label>
+        <br>
+        <select id="program-id2">
+            <option>CMJD</option>
+            <option>HDSE</option>             <!-- ewa yatathe option thoranna-->
+            <optgroup label="Undergraduate Students">
+            <option>BSc - University of Greater Manchester</option>
+            <option>BSc - Lincol University Collage</option>
+            </optgroup>
+
+            <optgroup label="Graduate Student">
+            <option>PGD - Immersive Software Engineering</option>
+            <option>PGD - Data Science</option>
+            <option>PGD - AI</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <!--<div>
+    <br>
+    <input type="submit" value="Submit">   mewa dn use kranne na mewa paranai
+    <input type="button" value="Update">
+    <input type="button" value="Delete">
+    <input type="reset" value="Reset">
+</div>-->
+
+    <div>
+        <br>
+        <button type="submit"> Submit </button>
+        <button type="button"> Update </button>
+        <button type="button"> Delete </button>
+        <button type="reset"> Reset </button>
+    </div>
+
+
+
+</form>
+
+
 
 </body>
 </html>
