@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Selector</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <style>
+
+        #section1 > div:first-child > ol > li:first-child {
+            color: red;
+        }
+
+        #section1 > div > div:nth-child(2) > ol > li {
+            color: rgb(18, 230, 18);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <section id="section1">
+        <div>
+            <ol>
+                <li>Sri Lanka</li> <!-- This is the first child of the first div in section1 [Need text color red] -->
+                <li>India</li>
+            </ol>
+            <div>
+                <ol>
+                    <li>Russia</li> <!-- This is the second child of the first div in section1 [Need text color Green] -->
+                </ol>
+            </div>
+        </div>
+        <div>
+            <div>
+                <ol>
+                    <li>UK</li>
+                    <li>USA</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="section2">
+        <div>
+            <ol>
+                <li>UAE</li>
+                <li>Dubai</li>
+            </ol>
+        </div>
+        <div>
+            <div>
+                <ol>
+                    <li>Japan</li>
+                    <li>China</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

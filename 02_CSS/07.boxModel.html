@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Box Model</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <style>
+        body{
+            background-color: rgb(190, 222, 233);  /* body ekata lightblue color ekak dila thiyenne */
+        }
+
+        .box-model1 h1{
+            border-left: 2px solid red;       /*border ekata 2px width ekak, solid type ekak, red color ekak dila thiyenne */
+            border-right: 2px solid lightgreen;  /* border ekata 2px width ekak, solid type ekak, lightgreen color ekak dila thiyenne */
+            border-top: 2px solid blue;   /* border ekata 2px width ekak, solid type ekak, blue color ekak dila thiyenne */
+            border-bottom: 2px solid orange;   /* border ekata 2px width ekak, solid type ekak, orange color ekak dila thiyenne */
+
+            border-radius: 10px;  /* border ekata 10px radius ekak dila thiyenne */
+
+            padding: 10px;  /* border ekata 10px padding ekak dila thiyenne */
+            margin-left: 500px;  /* border ekata 500px margin ekak left side ekata dila thiyenne */
+
+            
+        }
+
+        .box-model1 h2{
+            border: 2px dotted green;     /* border ekata 2px width ekak, dotted type ekak, green color ekak dila thiyenne */
+            border-top-width: 10px;     /* border ekata 10px width ekak top side ekata dila thiyenne */
+            border-bottom-width: 30px;  /* border ekata 10px width ekak bottom side ekata dila thiyenne */
+            border-left-width: 50px;    /* border ekata 50px width ekak left side ekata dila thiyenne */
+            border-right-width: 70px;   /* border ekata 50px width ekak right side ekata dila thiyenne */
+        }
+
+        .box-model1 h3{
+            border: 2px dashed blue;   /* border ekata 2px width ekak, dashed type ekak, blue color ekak dila thiyenne */
+            border-bottom: 2px solid rgb(255, 0, 115);     /* border ekata 2px width ekak, dashed type ekak, blue color ekak dila thiyenne */
+        }
+
+        .box-model1 h4{
+            border: 2px dot-dash orange;     /* border ekata 2px width ekak, double type ekak, orange color ekak dila thiyenne */
+        }
+
+        .box-model1 h5{
+            border: 2px dot-dot-dash orangered;     /* border ekata 2px width ekak, double type ekak, orangered color ekak dila thiyenne */
+        }
+
+        .box-model1h4{
+            border-width: 10px;     /* border ekata 10px width ekak dila thiyenne */
+            border-color: lightgreen;  /* border ekata lightgreen color ekak dila thiyenne */
+            border-style: dotted;   /* border ekata dotted type ekak dila thiyenne */
+        }
+
+        .box-model1 div {
+                background-color: red;   /* div ekata red color ekak dila thiyenne */
+                width: 100px;   /* div ekata 100px width ekak dila thiyenne */
+                height: 100px;  /* div ekata 100px height ekak dila thiyenne */
+                border: 2px solid black;   /* div ekata 2px width ekak, solid type ekak, black color ekak dila thiyenne */
+                border-radius: 100%;  /* div ekata 50px radius ekak dila thiyenne */
+                padding: 20px;  /* div ekata 20px padding ekak dila thiyenne */
+                margin: 20px;   /* div ekata 20px margin ekak dila thiyenne */
+                text-align: center;  /* div ekata text-align center ekak dila thiyenne */
+                text-decoration: underline; /* div ekata text-decoration underline ekak dila thiyenne */
+                line-height: 70px;   /* div ekata line-height 60px ekak dila thiyenne */    
+        }
+
+        /* -------------------------------------- padding -------------------------------------- */
+        
+        .box-model-padding h1{
+            border: 2px solid red;   /* border ekata 2px width ekak, solid type ekak, red color ekak dila thiyenne */
+            padding: 100px 50px 20px 10px;   /* border ekata 100px padding ekak top side ekata, 50px padding ekak right side ekata, 20px padding ekak bottom side ekata, 10px padding ekak left side ekata dila thiyenne */ 
+        }
+
+        .box-model-padding h2{
+            border: 2px dotted blue;  /* border ekata 2px width ekak, solid type ekak, blue color ekak dila thiyenne */
+            padding: 20px 50px;   /* border ekata 20px padding ekak top and bottom side ekata, 50px padding ekak right and left side ekata dila thiyenne */    
+        }
+
+        .box-model-padding h3{
+            border: 2px dashed green;    /* border ekata 2px width ekak, dashed type ekak, green color ekak dila thiyenne */
+            padding: 20px;  /* border ekata 20px padding ekak top, right, bottom, left side ekata dila thiyenne */  
+        }
+
+        .box-model-padding h4{
+            border: 2px double orange;    /* border ekata 2px width ekak, double type ekak, orange color ekak dila thiyenne */
+            padding-top: 100px;   /* border ekata 100px padding ekak top side ekata dila thiyenne */
+        }
+        
+
+        /*-------------------------------------------- margin  --------------------------------------------*/
+
+        .box-model-margin h1{
+            border: 2px solid red;   /* border ekata 2px width ekak, solid type ekak, red color ekak dila thiyenne */
+            margin: 100px 50px 20px 10px;   /* border ekata 100px margin ekak top side ekata, 50px margin ekak right side ekata, 20px margin ekak bottom side ekata, 10px margin ekak left side ekata dila thiyenne */ 
+        }
+
+        .box-model-margin h2{
+            border: 2px dotted blue;  /* border ekata 2px width ekak, solid type ekak, blue color ekak dila thiyenne */
+            margin: 20px 50px;   /* border ekata 20px margin ekak top and bottom side ekata, 50px margin ekak right and left side ekata dila thiyenne */      
+        }
+
+        .box-model-margin h3{
+            border: 2px dashed green;    /* border ekata 2px width ekak, dashed type ekak, green color ekak dila thiyenne */
+            margin-top: 100px;   /* border ekata 100px margin ekak top side ekata dila thiyenne */
+            margin-bottom: 50px;    /* border ekata 50px margin ekak bottom side ekata dila thiyenne */
+            margin-left: 30px;  /* border ekata 30px margin ekak left side ekata dila thiyenne */
+            margin-right: 40px; /* border ekata 30px margin ekak right side ekata dila thiyenne */
+        }
+
+        .box-model-margin h4{
+            border: 2px double orange;    /* border ekata 2px width ekak, double type ekak, orange color ekak dila thiyenne */
+            margin-top: 100px;    /* border ekata 30px margin ekak top side ekata dila thiyenne */
+            margin-bottom: 100px; /* border ekata 30px margin ekak bottom side ekata dila thiyenne */
+        }
+
+        /* -------------------------------------------- border redius  -------------------------------------------- */
+
+        .border-redius .all{
+            background-color: red;  /* div ekata red color ekak dila thiyenne */
+            border: 2px solid black;   /* div ekata 2px width ekak, solid type ekak, black color ekak dila thiyenne */
+            border-radius: 100%; /* div ekata 100% radius ekak dila thiyenne */
+            width: 100px;   /* div ekata 100px width ekak dila thiyenne */
+            height: 100px;  /* div ekata 100px height ekak dila thiyenne */
+        }
+
+        .border-redius .top-left{
+            margin-top: 50px;   /* div ekata 20px margin ekak top side ekata dila thiyenne */
+            background-color: red;  /* div ekata red color ekak dila thiyenne */
+            border: 2px solid black;   /* div ekata 2px width ekak, solid type ekak, black color ekak dila thiyenne */
+            border-top-left-radius: 20%;    /* div ekata top left corner ekata 100% radius ekak dila thiyenne */
+            width: 100px;   /* div ekata 100px width ekak dila thiyenne */
+            height: 100px;  /* div ekata 100px height ekak dila thiyenne */
+        }
+
+        .border-redius .all-sides{
+            margin-top: 50px;   /* div ekata 20px margin ekak top side ekata dila thiyenne */
+            background-color: red;  /* div ekata red color ekak dila thiyenne */
+            border: 2px solid black;   /* div ekata 2px width ekak, solid type ekak, black color ekak dila thiyenne */
+            border-top-left-radius: 30px;    /* div ekata top left corner ekata 30px radius ekak dila thiyenne */
+            border-top-right-radius: 50px;   /* div ekata top right corner ekata 30px radius ekak dila thiyenne */
+            border-bottom-left-radius: 70px;    /* div ekata bottom left corner ekata 30px radius ekak dila thiyenne */
+            border-bottom-right-radius: 10px; /* div ekata bottom right corner ekata */
+            width: 100px;   /* div ekata 100px width ekak dila thiyenne */
+            height: 100px;  /* div ekata 100px height ekak dila thiyenne */
+        }
+
+        .border-redius .all-sideII{
+            margin-top: 50px;   /* div ekata 20px margin ekak top side ekata dila thiyenne */
+            background-color: red;  /* div ekata red color ekak dila thiyenne */
+            border: 2px solid black;   /* div ekata 2px width ekak, solid type ekak, black color ekak dila thiyenne */
+            border-radius: 30px 50px 70px 10px;    /* div ekata top left corner ekata 30px radius ekak, top right corner ekata 50px radius ekak, bottom left corner ekata 70px radius ekak, bottom right corner ekata 10px radius ekak dila thiyenne */
+            width: 100px;   /* div ekata 100px width ekak dila thiyenne */
+            height: 100px;  /* div ekata 100px height ekak dila thiyenne */
+        }
+        .border-redius .all-sideIII{
+            margin-top: 50px;   /* div ekata 20px margin ekak top side ekata dila thiyenne */
+            background-color: red;  /* div ekata red color ekak dila thiyenne */
+            border: 2px solid black;   /* div ekata 2px width ekak, solid type ekak, black color ekak dila thiyenne */
+            border-radius: 30px 50px;    /* div ekata top left corner ekata 30px radius ekak, top right corner ekata 50px radius ekak, bottom left corner ekata 30px radius ekak, bottom right corner ekata 50px radius ekak dila thiyenne */
+            width: 100px;   /* div ekata 100px width ekak dila thiyenne */
+            height: 100px;  /* div ekata 100px height ekak dila thiyenne */
+        }
+    </style>
+</head>
+<section class="box-model1">
+    <h1>
+    Hello world!
+</h1>
+<br>
+<br>
+<br>
+
+<h2>
+    Hello world!
+</h2>
+<br>
+<br>
+<br>
+
+
+<h3>
+    Hello world!
+</h3>
+<br>
+<br>
+<br>
+
+
+<h4>
+    Hello world!
+</h4>
+<br>
+<br>
+<br>
+
+
+<h5>
+    Hello world!
+</h5>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis animi suscipit eveniet deleniti architecto quam. 
+    Assumenda necessitatibus dignissimos nemo ab, accusantium voluptate, architecto temporibus ea officia sequi, voluptas qui. 
+    Ipsum?
+</p>
+<div>
+    Hii...!
+</div>
+</section>
+<br>
+<br>
+<br>
+
+<!-- -------------------------------------------- padding  -------------------------------------------- -->
+
+<section class="box-model-padding">
+    <h1>
+    Hello world!
+    </h1>
+    <br>
+    <br>
+    <br>
+
+    <h2>
+    Hello world!
+    </h2>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3>
+    Hello world!
+    </h3>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h4>
+    Hello world!
+    </h4>
+</section>
+
+
+<!-- -------------------------------------------- margin  -------------------------------------------- -->
+
+<section class="box-model-margin">
+    <h1>
+    Hello world!
+    </h1>
+    <br>
+    <br>
+    <br>
+
+    <h2>
+    Hello world!
+    </h2>
+    <br>
+    <br>
+    <br>
+
+    <h3>
+    Hello world!
+    </h3>
+    <br>
+    <br>
+    <br>
+    <h4>
+    Hello world!
+    </h4>
+</section>
+
+<!-- -------------------------------------------- border redius  -------------------------------------------- -->
+ <section class="border-redius">
+    <div class="all">
+
+    </div>
+
+    <div class="top-left">
+
+    </div>
+
+    <div class="all-sides">
+
+    </div>
+
+    <div class="all-sideII">
+
+    </div>
+
+    <div class="all-sideIII">
+
+    </div>
+ </section>
+
+<body>
+    
+</body>
+</html>

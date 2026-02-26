@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Traversing</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <style>
+        button {  /*  0, 0, 0, 1 */
+            background-color: orange;
+        }
+
+        .btn {   /*  0, 0, 1, 0 */
+            background-color: blue;
+        }
+
+        #mybtn {   /*  0, 1, 0, 0 */
+            background-color: rgb(25, 246, 25);
+        }
+
+        h1 {   /*  0, 0, 0, 1 */
+            color: rgb(32, 255, 32);
+        }
+
+        section > h1 {   /*  (0, 0, 0, 1)  + (0, 0, 0, 0) + (0, 0, 0, 1 ) = (0, 0, 0, 2) */
+            color: rgb(255, 32, 32);
+        }
+
+        body > section > h1 {   /*  (0, 0, 0, 1) + (0, 0, 0, 0) + (0, 0, 0, 1) + (0, 0, 0, 0) + (0, 0, 0, 1) = (0, 0, 0, 3) */
+            color: orangered;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <button id="mybtn" class="btn" style="background-color: cadetblue;">Click Me!</button>   <!--  1, 0, 0, 0 -->
+
+    <section>
+        <h1>Hello world!</h1>
+    </section>
+    
+</body>
+</html>

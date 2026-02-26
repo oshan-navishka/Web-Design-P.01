@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Absolute Position</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <style>
+        section{
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+        }
+
+        #section-01{
+            background-color: red;
+            top: 0;
+            
+        }
+        #section-02{
+            background-color: green;
+            top: 0;
+            right : 0;
+        }
+        #section-03{
+            background-color: yellow;
+            bottom: 0;
+        }
+        #section-04{
+           background-color: deeppink;
+            bottom: 0;
+            right: 0;
+        }
+
+        #s1d1{
+            position: absolute;
+            width: 8vw;
+            aspect-ratio: 1/1;
+            background-color: aliceblue;
+            border-bottom-right-radius: 100%;
+        }
+        #s2d1{
+            position: absolute;
+            width: 8vw;
+            aspect-ratio: 1/1;
+            right: 0;
+            top: 0;
+            background-color: aliceblue;
+            border-bottom-left-radius: 100%;
+        }
+        #s3d1{
+            position: absolute;
+            width: 8vw;
+            aspect-ratio: 1/1;
+            background-color: aliceblue;
+            border-top-right-radius: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        #s4d1{
+            position: absolute;
+            width: 8vw;
+            aspect-ratio: 1/1;
+            background-color: aliceblue;
+            border-top-left-radius: 100%;
+            bottom: 0;
+            right: 0;
+        }
+
+        #s1d2{
+                width: 10vw;
+                aspect-ratio: 1/1;
+                background-color: rgb(255, 255, 255);
+                border-radius: 50%;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+    
+                position: absolute;
+        }
+
+        #s2d2{
+            width: 10vw;
+            aspect-ratio: 1/1;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+            position: absolute;
+        }
+
+        #s3d2{
+            width: 10vw;
+            aspect-ratio: 1/1;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+            position: absolute;
+        }
+
+        #s4d2{
+             width: 10vw;
+            aspect-ratio: 1/1;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+            position: absolute;
+        } 
+        
+        #s1d3{
+             width: 5vw;
+            aspect-ratio: 1/1;
+            background-color: rgb(255, 0, 0);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+            position: absolute;
+        }
+
+        #s2d3{
+             width: 5vw;
+            aspect-ratio: 1/1;
+            background-color: rgb(255, 0, 0);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+            position: absolute;
+        }
+
+        #s3d3{
+             width: 5vw;
+            aspect-ratio: 1/1;
+            background-color: rgb(255, 0, 0);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+            position: absolute;
+        }
+
+        #s4d3{
+             width: 5vw;
+            aspect-ratio: 1/1;
+            background-color: rgb(255, 0, 0);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+            position: absolute;
+        } 
+        
+        #b1{
+             width: 10vw;
+             aspect-ratio: 1/1;
+            background-color: rgb(255, 255, 255);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+            position: absolute;
+        }
+
+        #b1d1{
+             width: 5vw;
+            aspect-ratio: 1/1;
+            background-color: rgb(255, 0, 0);
+            border-radius: 50%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+            position: absolute;
+        }
+
+        #b3{
+             width: 10vw;
+             height: 5vw;
+            background-color: rgb(255, 255, 255);
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+            position: relative;
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    <section id="section-01">
+        <div id="s1d1"></div>
+        <div id="s1d2"></div>
+        <div id="s1d3"></div>
+    </section>
+
+    <section id="section-02">
+        <div id="s2d1"></div>
+        <div id="s2d2"></div>
+        <div id="s2d3"></div>
+    </section>
+
+    <section id="section-03">
+        <div id="s3d1"></div>
+        <div id="s3d2"></div>
+        <div id="s3d3"></div>
+    </section>
+
+    <section id="section-04">
+        <div id="s4d1"></div>
+        <div id="s4d2"></div>
+        <div id="s4d3"></div>
+    </section>
+
+    <div id="b1">
+        <div id="b1d1"></div>
+    </div>
+
+    <div id="b3"></div>
+
+</body>
+</html>

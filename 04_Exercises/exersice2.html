@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Traversing</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <style>
+        h1 {
+            color: red;
+        }
+
+        section:first-child > main > ul > li:first-child {
+            color: rgb(255, 92, 119);
+        }
+
+        section > main > ul > li:nth-child(3) > ol > li:first-child > ul > li:first-child > dl > dd:first-child > ol > li {
+            color: rgb(44, 237, 44);
+        }
+
+        section:first-child > main > p::first-letter {
+            font-size: 50px;
+            color: rgb(0, 60, 255);
+        }
+
+    </style>
+
+</head>
+
+<body>
+<section>
+    <main>
+        <h1>IJSE</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut debitis doloremque, doloribus dolorum exercitationem iusto labore officiis pariatur provident unde! Atque commodi deleniti mollitia totam voluptatem? Aspernatur non qui totam!</p>
+        <ul>
+            <li>DEP</li>
+            <li>CMJD</li>
+            <li>
+                GDSE
+                <ol>
+                    <li>
+                        Semester 01
+                        <ul>
+                            <li>
+                                PRF
+                                <dl>
+                                    <dd>
+                                        Day 01
+                                        <ol>
+                                            <li>Module Intro</li>
+                                        </ol>
+                                    </dd>
+                                    <dd>Day 02</dd>
+                                    <dd>Day 03</dd>
+                                    <dd>Day 04</dd>
+                                    <dd>Day 05</dd>
+                                </dl>
+                            </li>
+                            <li>OOP</li>
+                            <li>Software Engineering</li>
+                            <li>DB Programming</li>
+                        </ul>
+                    </li>
+                    <li>Semester 02</li>
+                    <li>Semester 03</li>
+                    <li>Semester 04</li>
+                </ol>
+            </li>
+        </ul>
+    </main>
+</section>
+<section>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+
+    <main>
+        <h1>Java</h1>
+        <ul>
+            <li>Exam 1</li>
+            <li>Exam 2</li>
+            <li>Exam 3</li>
+        </ul>
+    </main>
+</section>
+</body>
+</html>
