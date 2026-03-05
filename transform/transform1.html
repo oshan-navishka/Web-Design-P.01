@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transform</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <style>
+        #d1{
+            width: 250px;
+            height: 250px;
+            background:url(../assets/emoji.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            transform: rotate(45deg); /*adala div ek rotate karanna oni nm trasporm kiyana property eke rotate kiyana eka*/
+        }
+        #d2{
+            width: 250px;
+            height: 250px;
+            background:url(../assets/emoji.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            transform: rotateX(55deg);       /*X akshaya dige rotate wenwa*/
+        }
+
+        #d3{
+            width: 250px;
+            height: 250px;
+            background:url(../assets/emoji.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            transform: rotateY(45deg);   /*Y aksya dige rotate wenawa*/
+
+        }
+
+        #d4{
+            width: 250px;
+            height: 250px;
+            background:url(../assets/emoji.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            transform: rotate3d(1,1,1, 320deg);  /*3d widihata pennana rotate3d kiyla ganne values 4k pass karanna oni  rotate3d(x, y, z, Angle)*/
+        }
+
+        #d5{
+            width: 250px;
+            height: 250px;
+            background:url(../assets/emoji.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            transform: rotate(312deg);  /*image eke left side eke madin rotate karawanna */
+            transform-origin: left; /*left , top, rigth, bottom ona ekaka dala rotate karanna puluwan*/
+        }
+
+        #d6{
+            width: 250px;
+            height: 250px;
+            background:url(../assets/emoji.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            transform: rotate(45deg);
+            transform-origin: 65% 66%; /*x akshaya dige 65% Y akshaya dige 66% awama hari mada hambena thanin rotate wenna patan gannawa */
+        }
+
+        #d7{
+            width: 250px;
+            height: 250px;
+            background:url(../assets/emoji.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            transform: scale(1);
+        }
+
+        #d8{
+            width: 250px;
+            height: 250px;
+            background:url(../assets/emoji.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            transform: skew(2);
+        }
+        #d9{
+            width: 250px;
+            height: 250px;
+            background:url(../assets/emoji.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            transform: translate(2);
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <br>
+    <br>
+    <div id="d2"></div>
+    <br>
+    <br>
+    <div id="d3"></div>
+    <br>
+    <br>
+    <div id="d4"></div>
+    <br>
+    <br>
+    <div id="d5"></div>
+    <br>
+    <br>
+    <div id="d6"></div>
+    <br>
+    <br>
+    <div id="d7"></div>
+    <br>
+    <br>
+    <div id="d8"></div>
+    <br>
+    <br>
+    <div id="d9"></div>
+</body>
+</html>
