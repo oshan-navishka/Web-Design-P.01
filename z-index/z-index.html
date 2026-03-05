@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Z-Index</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <style>
+
+        /*Z-ibde eke maximum value eka +2147483647*/
+        /*Z-ibde eke minimum value eka -2147483647*/
+        
+        div{
+            position: absolute;
+        }
+        #div1{
+            width: 400px;
+            height: 400px;
+            background-color: red;
+
+            /* z-index: 999; */
+            z-index: calc(infinity);    /*z-ndex max value eka dl vada naththam meka thama awasana lokuma value weka me dnawa uda eka vada naththam */
+        }
+
+        #div2{
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            
+            z-index: 2;
+        }
+
+        #div3{
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+
+            z-index: 1;
+        }
+
+        #div4{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+</body>
+</html>
