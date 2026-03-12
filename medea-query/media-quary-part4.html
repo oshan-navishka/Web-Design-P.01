@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Media-Query</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <style>
+        #desktop-header {
+            width: 100vw;
+            height: 80px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 30px;
+        }
+
+        #desktop-header > nav {
+            height: fit-content;
+            align-self: center;
+        }
+
+        #desktop-header > nav > a {
+            text-decoration: none;
+            margin: 0px 10px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            align-self: center;
+        }
+
+        @media (max-width: 800px) {
+            #desktop-header {
+                justify-content: space-between;
+            }
+
+            #desktop-header > nav {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+      <header id="desktop-header">
+        <img src="../assets/logo.png" title="logo" alt="logo" width="200">
+
+        <span class="menu-icon" aria-label="Open menu">☰</span>
+        
+        <nav>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Services</a>
+            <a href="">Contact Us</a>
+        </nav>
+    </header>
+    
+</body>
+</html>
