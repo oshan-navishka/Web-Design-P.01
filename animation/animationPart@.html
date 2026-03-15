@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Animation</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <style>
+        div{
+            width: 200px;
+            aspect-ratio: 1/1;
+            background: yellow;
+            border: 4px solid red;
+
+            animation-name: myanimation;
+            animation-duration: 10000ms;
+
+            animation-direction: reverse; /*animation directon eka */
+
+            animation-iteration-count: infinite; /*non-stop wada karanna*/
+            animation-direction: alternate-reverse; /*nomal, reverce, alterante*/
+        }
+
+        /*
+            keyframe 01 :
+            pink background
+
+
+
+            keyframe 02 :
+            red backgrond
+        */
+
+        @keyframes myanimation {   /*myanimation - animation eke name eka*/
+            from{ /*keyframe 01 (Start)*/
+                background: pink;
+                margin-left: 0;
+            }
+            to{  /*keyframe 02 (End)*/
+                background: red;
+                margin-left: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

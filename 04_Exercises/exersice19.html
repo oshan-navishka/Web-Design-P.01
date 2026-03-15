@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Media-Query</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <style>
+        section{
+            width: fit-content;
+            position: relative;
+        }
+
+        #d1{
+            width: 400px;
+            height: 200px;
+            background: skyblue;
+
+            animation-name: myanimation;
+            animation-duration: 10000ms;
+
+            animation-iteration-count: infinite; /*non-stop wada karanna*/
+            animation-direction: alternate; /*nomal, reverce, alterante*/
+        }
+        .wheel{
+            width: 100px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background: rgb(252, 252, 252);
+            border-top: 5px solid rgb(6, 6, 6);
+            border-bottom: 5px solid rgb(3, 3, 3);
+            border-left: 5px solid rgb(103, 100, 100);
+            border-right: 5px solid rgb(103, 100, 100);
+
+            position: absolute;
+            bottom: -50px;
+
+            animation: wheelRotate 1s linear infinite;
+        }
+
+        .wheel.left {
+            left: 20px;
+        }
+
+        .wheel.right {
+            right: 20px;
+        }
+
+        @keyframes myanimation {
+            from{
+                margin-left: 0;  
+                  
+            }
+            to{
+                margin-left: 800px;
+            }
+        }
+
+        @keyframes wheelRotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+    </style>
+
+<body>
+    <section>
+        <div id="d1"></div>
+        <div class="wheel left"></div>
+            <div class="wheel right"></div>
+    </section>
+    
+</body>
+</html>

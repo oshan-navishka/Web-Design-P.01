@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body{
+    background:#e5e5e5;
+}
+
+.sidebar{
+    position:fixed;
+    top:100px;
+    left:20px;
+}
+
+.menu{
+    width:60px;
+    height:60px;
+    background:linear-gradient(45deg,#7b2ff7,#a4508b);
+    margin:20px 0;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    transition:0.4s;
+    color:white;
+    font-family:Arial;
+    box-shadow:0 5px 10px rgba(0,0,0,0.3);
+}
+
+.icon{
+    width:60px;
+    text-align:center;
+    font-size:22px;
+}
+
+.text{
+    white-space:nowrap;
+    opacity:0;
+    transition:3s;
+}
+
+.menu:hover{
+    width:220px;
+}
+
+.menu:hover .text{
+    opacity:1;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="menu">
+<div class="icon">👤</div>
+<div class="text">Menu One</div>
+</div>
+
+<div class="menu">
+<div class="icon">🚑</div>
+<div class="text">Menu Two</div>
+</div>
+
+<div class="menu">
+<div class="icon">🌐</div>
+<div class="text">Menu Three</div>
+</div>
+
+<div class="menu">
+<div class="icon">📚</div>
+<div class="text">Menu Four</div>
+</div>
+
+<div class="menu">
+<div class="icon">🛒</div>
+<div class="text">Menu Five</div>
+</div>
+
+</div>
+
+</body>
+</html>
