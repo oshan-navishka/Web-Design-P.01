@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>loosely typed</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <script>
+
+        var a = 10;
+        var b = 10;
+        var c = 6;
+        var d = "10";
+
+        //Equally (==)
+        console.log(a == b);  //true
+        console.log(a == c);  //false
+        console.log(a == d);  //true    string value ekak unath d kiyana kena 10 nisa eka samai kiuala gannawa
+        console.log("================");
+
+        //Inequality (!=)
+        console.log(a != b); // false
+        console.log(a != c); // true
+        console.log(a != d); // false
+        console.log("================");
+
+        // Strict equality (===)
+        console.log(a === b);  //   10 === 10 -> true
+        console.log(a === c);  //   10 === 6 -> false
+        console.log(a === d);  //   10 === "10" -> false   type ekath ekkama cheack karanawa kalin eke ehma kre na
+        console.log("================");
+
+        //strict inequality (!==)
+        console.log(a !== b);  //   10 !== 10 -> false
+        console.log(a !== c);  //   10 !== 6 -> true
+        console.log(a !== d);  //   10 !== "10" -> true   type ekath ekkama cheack karanawa kalin eke ehma kre na
+        console.log("================");
+
+        // Greater than (>) 
+        console.log(a > b); // 10 > 10 -> false
+        console.log(a > c); // 10 > 6 -> true
+        console.log(a > d); // 10 > "10" -> false
+        console.log("================");
+
+        // Less than (<)
+        console.log(a < b); // 10 < 10 -> false
+        console.log(a < c); // 10 < 6 -> false
+        console.log(a < d); // 10 < "10" -> false
+        console.log("================");
+
+        // Greater than or equal to (>=)
+        console.log(a >= b); // 10 > 10 -> true
+        console.log(a >= c); // 10 > 6 -> true
+        console.log(a >= d); // 10 > "10" -> true
+        console.log("================");
+
+        // Less than or equal to (<=)
+        console.log(a <= b); // 10 <= 10 -> true
+        console.log(a <= c); // 10 <= 6 -> false
+        console.log(a <= d); // 10 <= "10" -> true
+        console.log("================");
+
+        
+
+    </script>
+</body>
+</html>
