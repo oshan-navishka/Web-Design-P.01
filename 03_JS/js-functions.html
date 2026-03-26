@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Js Functions</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <script>    
+        /*
+            public void myMethod(){
+                s.o.p("Hello, world!")
+            }
+
+            myMethod();
+        */
+
+        // Name fuctions  ============================
+
+        // Case 01:
+        function myFunction(){
+            console.log("Hello, world!");
+        }
+
+        myFunction();   //js wala method hadanne fuction kiyala dla cl kranne nomal widihata thamai
+        myFunction();
+        myFunction();
+        myFunction();
+        myFunction();
+
+        // Case 02:
+        function findSum(num1 , num2){
+            console.log(num1+num2);
+        }
+        findSum(10,20);
+
+        // Case 03:
+        function findMul(num1 , num2){
+            return num1 * num2;
+        }
+        var result = findMul(10,20);
+        console.log("Result " + result);
+
+
+        //Fuctions Expression ============================
+
+        //Case 01:
+        const myFunction = function(){  // cont dala issellalma method name eka hadagna oni |  const myFunction = function()  |
+            console.log("Hello, world!!!")
+        }
+        myFunction();
+
+        //case 02:
+        const findSum = function(n1, n2){
+            console.log(n1 + n2);
+        }
+        findSum(100, 200);
+
+        // Case 03:
+        const findMul = function(num1 , num2){
+            return num1 * num2;
+        }
+        var result = findMul(10,20);
+        console.log("Result " + result);
+
+        //Arrow fuctions ============================
+        
+        //Case 01:
+        const myFunction = () => {  // function kiyana keyword eka ain karala "=>" meka dnwa | const myFunction = () =>  |
+            console.log("Hello, world!!!")
+        }
+        myFunction();
+
+        //case 02:
+        const findSum = (n1, n2) => {
+            console.log(n1 + n2);
+        }
+        findSum(100, 200);
+
+        // Case 03:
+        const findMul = (num1 , num2) => {
+            return num1 * num2;
+        }
+        var result = findMul(10,20);
+        console.log("Result " + result);
+
+    </script>
+</body>
+</html>
