@@ -26,7 +26,7 @@
 
         console.log("===============");
 
-        var marks = 75;
+        var marks = 76;
 
         if (marks >= 0 && marks <= 35) {
             console.log("F");
@@ -41,7 +41,28 @@
         } else if (marks > 75 && marks <= 100) {
             console.log("A");
         }
+        console.log("===============");
 
+        var num = 10;
+
+        if(num % 2 == 0){
+            console.log("Result: Even Number");
+        }else{
+            console.log("Result: Odd Number");
+        }
+        console.log("===============");
+
+        var num2 = 21;
+        var result = (num2 % 2 == 0) ? "Even Number" : "Odd Number";   // Ternary Operator
+        console.log("Result: " + result);
+        console.log("===============");
+
+        var marks = 35;
+        var restlt = (marks >= 75) ? "A" : (marks >= 65) ? "B" : (marks >= 55) ? "C" : (marks >= 35) ? "S" : "F";
+        console.log("Result: " + restlt);
+        console.log("===============");
+
+        
         
     </script>
 </body>
