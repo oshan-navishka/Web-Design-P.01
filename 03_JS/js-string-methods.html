@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>loosely typed</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <script>
+        let result;
+        //      0,1,2,3,4,5,6,7,8,9,10,11,12        me widihhata enne
+        let x = "Hello, world!"
+
+        // ================= chartAt() =================
+
+        result = x.charAt (7);   // imdex eka awage  hello, world! kiyana eke 7 wenni letter eka mkkd kiyala thma me ahnne
+        console.log(result);  // e letter eka print karanwa 
+
+        result = x.charAt (8);
+        console.log(result);
+
+        result= x.charAt(12);
+        console.log(result);
+
+        // ================= charCodeAt() =================
+
+        result = x.charCodeAt(7);   //7 weni lettere eka balala ekata adala unicode eka thamai meya ganne
+        console.log(result);   // unicode eka print kranawa (119)
+
+        result = x.charCodeAt(1);
+        console.log(result); 
+
+        // ================= concat() =================
+
+        var a = "Hello";
+        var b = "Hii";
+        var c = "Wow";
+
+        result = a.concat(b);  // a concat b = "HelloHii"    dekama prin wenawa mulin a deweniyata b
+        console.log(result);
+
+        result = a.concat(b,c);  // a b c thunama piliwelata print wenawa "HelloHiiWow"  kiyala
+        console.log(result);
+
+        result = a.concat("*", b, "*", c);  //  result *Hello*Hii*Wow
+        console.log(result);
+
+        // ================= endWith() =================
+
+        var url1 = "www.ijse.lk";
+        var url2 = "www.wikipidia.com";
+        var url3 = "https://roorcode.io";
+
+        result = url1.endsWith(".lk");  // url eka end wenne ".lk" walind balanawa ehma wenawanm result eka true kiyala denawa
+        console.log(result);    //true
+
+        result = url2.endsWith(".com");
+        console.log(result);    //true
+
+        result = url3.endsWith(".com");
+        console.log(result);    //false
+
+        // ================= startsWith() =================
+
+        result = url1.startsWith("www");  // start wenne www walinda balanwa ehma wenawnm resulteka true kiyala denawa
+        console.log(result); // true
+
+        result = url2.startsWith("https");
+        console.log(result); // false
+
+        result = url3.startsWith("www");
+        console.log(result);  // true
+
+        // ================= includes() =================
+
+        var fruits = "Apple Banana Kiwi";
+
+        result = fruits.includes("Banana");  // banana kiyana wachane thiyada balanawa eka thiynawan  result eka tru kiyala enwa
+        console.log(result);  //true
+
+        result = fruits.includes("Apple");
+        console.log(result);  //true
+
+        result = fruits.includes("mango");
+        console.log(result);  //false
+
+        // ================= search() =================
+
+        result = fruits.search("Banana");  // banana kiyana wachane patan ganne kiweni index ekeda kiyana hoyna eka
+        console.log(result); // 6
+
+        result = fruits.search("Orange");  //  Orange kiyala ekaka nane e nisa print wenne -1 kiyla
+        console.log(result); // /1
+
+        // ================= replace() =================
+
+        var y = "Hello, world!";
+
+        result = y.replace("world", "IJSE");  // hello, world kiyana wachane "world" wenuwata "IJSE" kiyna wachan replace karanne mehema
+        console.log(result);  // Hello, IJSE
+
+        y = "A B C D E F";
+        console.log(y); // A B C D E F
+        result = y.replace(" ", ","); // me wage ekaka space godak thibbath meya mulinma ena space eka witharai ganne
+        console.log(result);  // A,B C D E F
+
+        // ================= replaceAll() =================
+
+        result = y.replaceAll(" ", ",");  // okomama space walalata "," eka replace wenawa
+        console.log(result);  // A,B,C,D,E,F
+
+        // ================= slice() =================
+
+        x = "Hello, world!";
+        result = x.slice(2,7);  // 2 index eke idan 7 wenakal witharak letter gannawa "7 weni letter eka ganne na"
+        console.log(result); // llo,
+
+        // ================= substring() =================
+
+        x = "Hello, world!";
+        result = x.substring(2,7);  // 2 index eke idan 7 wenakal witharak letter gannawa "7 weni letter eka ganne na"
+        console.log(result); // llo,
+
+        // ================= split() =================
+
+        x = "mango,banana,apple,orange";
+
+        result = x.split(",");  // "," eka thiyana than walin wena wenma kadala ewa array bekaka wage prin karanawa 
+        console.log(result); // " ['mango' , 'banana' , 'apple' , 'orange'] "
+
+        x = "mangoxxbananaxxapplexxorange";
+
+        result= x.split("xx");  //  "xx" walin wen karala 
+        console.log(result);  // " ['mango' , 'banana' , 'apple' , 'orange'] "
+
+        // ================= toLowerCase() and toUpperCase =================
+
+        var msg = "Hello! welcome to Sri Lanka";
+
+        result = msg.toLowerCase(); // okkoma akuru "simple" walata convert karanwa
+        console.log(result);  // hello! welcome to sri lanka
+
+        result = msg.toUpperCase(); // okkoma letters "Capital" walata convert karanna
+        console.log(result); // HELLO! WELCOME TO SRI LANKA
+
+        // ================= trim() =================
+
+        var msg = "        Hello! welcome to Sri Lanka             ";
+
+        result = msg.trim(); // issarahin ha =ri pitipassen hri thiyana "space" ein karaganna oni nm "trim()" eka use karanwa
+        console.log(result); // Hello! welcome to Sri Lanka
+
+        // ================= length=================
+
+        x = "ABCDEF";
+
+        console.log(x.length);  // method ekk newei legth kiyana ek mkak hri ekaka length eka balanne mehema | console.log(x.length) = 6 
+
+    </script>
+</body>
+</html>
