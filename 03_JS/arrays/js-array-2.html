@@ -40,7 +40,7 @@
        x.unshift("Namalbaby" , "Yoshithababy");
        console.log(x);      // ['Namalbaby', 'Yoshithababy', 'Nimal', 'Ranil', 'Sajith', 'Gotabaya', 'Anura']
 
-       // array dekak ekata ekathu karana vidiha 
+       // a.concat(b)  array dekak ekata ekathu karana vidiha 
        let a = [1,2,3];
        let b = [4,5,6,7,8,9];
        let result = a.concat(b)
@@ -53,6 +53,30 @@
        // arrays dekata wadiya ekathu karanne (merge) karanne mehema
         let result3 = a.concat(b,x);
         console.log("Result3 :", result3);    // [1, 2, 3, 4, 5, 6, 7, 8, 9, 'Namalbaby', 'Yoshithababy', 'Nimal', 'Ranil', 'Sajith', 'Gotabaya', 'Anura']
+
+        // slice() Get a coppy of an array possition
+        let p = [10,20,30,40,50,60,70,80,90,100];
+
+        let r1 = p.slice(2); // idex 2 idan patan ganne 
+        console.log("r1 ", r1);    // r1 = (8) [30, 40, 50, 60, 70, 80, 90, 100]
+
+        let r2 = p.slice(5, 9); // idex 5  id index 9ta enakal elements denwa
+        console.log("r2 " + r2);    // r2 =  60,70,80,90
+
+        let r3 = p.slice(-1);  // anthima index eka print karanna
+        console.log("r3 " + r3);   // r3 = 100
+
+        let r4 = p.slice(-3); // anthima eke idan index 3k apassata print krnwa
+        console.log("r4 " + r4);  // r4 = 80,90,100
+
+
+        // splice() dena index eke idan anith item tika remove karanwa e remove karana tika display karanwa
+        let r5 = p.splice(7);
+        console.log(r5);   //  [80, 90, 100]
+
+        // ayath dn p print karama ara itmes tika reove una array ekk print wenne
+        console.log(p);   // [10, 20, 30, 40, 50, 60, 70]
+        
 
     </script>
 </body>
