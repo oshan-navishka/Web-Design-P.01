@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOM Manipulation</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../assets/lib/normalize.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        #topic{
+            color: blue;
+            font-size: 50px;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        #btn{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: green;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #btn2{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #btn3{
+            position: absolute;
+            top: 700px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: rgb(255, 0, 238);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #btn4{
+            position: absolute;
+            top: 700px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: orange;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1 id="topic">0</h1>
+    <button id="btn">Increase</button>
+    <button id="btn2">Decrease</button>
+    <button id="btn3">Reset</button>
+    <button id="btn4">Multiply</button>
+    <script>
+        
+        var h1_element = document.getElementById("topic");
+        var btn_element = document.getElementById("btn");
+        var btn_element2 = document.getElementById("btn2");
+        var btn_element3 = document.getElementById("btn3");
+        var btn_element4 = document.getElementById("btn4");
+
+        var value = 0;
+
+        btn_element.addEventListener("click", () => {
+            value+=1;
+            h1_element.innerText = value;
+        });
+
+        btn_element2.addEventListener("click", () => {
+            value-=1;
+            h1_element.innerText = value;
+        });
+
+        btn_element3.addEventListener("click", () => {
+            value = 0;
+            h1_element.innerText = value;
+        });
+
+        btn_element4.addEventListener("click", () => {
+            value*=2;
+            h1_element.innerText = value;
+        });
+    </script>
+</body>
+</html>

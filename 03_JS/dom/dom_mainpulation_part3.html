@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOM Manipulation</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../assets/lib/normalize.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   
+
+</head>
+<body>
+    
+    <h1 id="topic">Welcome to JavaScript!</h1>
+    <div id="div1"><h3>Welcome</h3>to India</div>
+
+    <script>
+
+        var element = document.getElementById("topic");
+        var txt = element.innerText;
+        console.log(txt);       // Welcome to JavaScript!
+
+        var div_element = document.getElementById("div1");
+        element.innerText = "Habibi Welcome to Sri Lanka!";  // change the text of the element
+        console.log(div_element.innerText);  
+        console.log(div_element.innerHTML);
+
+        div_element.innerText = "Habibi welcome to <i> Sri Lanaka. </i>";  // change the text of the element
+        div_element.innerHTML = "Habibi welcome to <i> Sri Lanaka. </i>";  // change the text of the element
+        
+
+    </script>
+    
+</body>
+</html>
