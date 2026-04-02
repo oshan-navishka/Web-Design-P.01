@@ -40,7 +40,7 @@
        x.unshift("Namalbaby" , "Yoshithababy");
        console.log(x);      // ['Namalbaby', 'Yoshithababy', 'Nimal', 'Ranil', 'Sajith', 'Gotabaya', 'Anura']
 
-       // a.concat(b)  array dekak ekata ekathu karana vidiha 
+       // 05. concat() method - combine two or more arrays
        let a = [1,2,3];
        let b = [4,5,6,7,8,9];
        let result = a.concat(b)
@@ -54,7 +54,7 @@
         let result3 = a.concat(b,x);
         console.log("Result3 :", result3);    // [1, 2, 3, 4, 5, 6, 7, 8, 9, 'Namalbaby', 'Yoshithababy', 'Nimal', 'Ranil', 'Sajith', 'Gotabaya', 'Anura']
 
-        // slice() Get a coppy of an array possition
+        // 06. slice() method - Get a copy of an array position
         let p = [10,20,30,40,50,60,70,80,90,100];
 
         let r1 = p.slice(2); // idex 2 idan patan ganne 
@@ -70,13 +70,97 @@
         console.log("r4 " + r4);  // r4 = 80,90,100
 
 
-        // splice() dena index eke idan anith item tika remove karanwa e remove karana tika display karanwa
+        // 07.splice() dena index eke idan anith item tika remove karanwa e remove karana tika display karanwa
         let r5 = p.splice(7);
         console.log(r5);   //  [80, 90, 100]
 
         // ayath dn p print karama ara itmes tika reove una array ekk print wenne
         console.log(p);   // [10, 20, 30, 40, 50, 60, 70]
+
+        // index 1 idan patan ganne index 5 iden apassata remove karanwa e remove karana tika display karanwa e remove karana tika display karanwa
+        let r6 = p.splice(1, 5, 100, 200, 300); 
+        console.log(r6);   // [20, 30, 40, 50, 60]
+
+        // index 1 idan  index 5 ta yanakal remove wenala 100, 200, 300 eka add karanwa
+        console.log(p);   // [10, 100, 200, 300, 70]
         
+        /*========================================================================================================
+        includes():
+        true / false check karanwa
+        */
+        let fruits = ["apple" , "banana", "painepple", "Mango"];
+        console.log(fruits.includes("banana"));  // true
+        console.log(fruits.includes("grapes"));  // false
+
+        /*========================================================================================================
+        forEach():
+        array eke thiyana item tika ekin eka ganna puluwan eka parama
+        */
+        fruits.forEach(function(item){
+            console.log(item);
+        });
+
+        /*========================================================================================================
+        map():
+        array eke thiyana item tikai index tikai dekama ganna puluwan eka parama
+        */
+        fruits.map(function(item, index){
+            console.log(index + " --> " +  item);
+        });
+
+        let newFruits = fruits.map(function(item){
+            return item + "s";
+        });
+        console.log(newFruits);   // ["apples", "bananas", "painepples", "Mangos"]
+
+        /*========================================================================================================
+        filter():
+        array eke thiyana item filter karala ganna meka use karanwa
+        */
+        var k = [10,11,20,21,30,31,40,41,50,51];
+        var results = k.filter(function(item){
+            return item % 2 == 0;
+        });
+        console.log("New array: " + results);   // New array: 10,20,30,40,50
+
+        /*========================================================================================================
+        sort():
+        array eke thiyana item tika sort karanwa
+        */
+       var ab = [12,10,5,3,8,6,9,4,7,2,13];
+       var newArr = ab.sort();
+       console.log("new arr: " + newArr); // new arr: 2,3,4,5,6,7,8,9,10,12,13
+       
+       let last = ab.sort((a,b) => b - a);  // sort karana eka a - b karala sort karanwa | b - a karala sort karanwa
+       console.log(last);  // [13,12,10,9,8,7,6,5,4,3,2]
+
+       /*========================================================================================================
+       reverse():
+       array eke thiyana item tika reverse karanwa
+       */
+       let v = ["A", "B", "C", "D", "E"];
+       console.log(v.reverse());   // ["E", "D", "C", "B", "A"]
+
+       /*==========================================================================================================
+       join():
+       array eke thiyana item tika join karanwa
+       */
+
+       var join_result_1 = v.join(" , ");
+       var join_result_2 = v.join(" * ");
+       var join_result_3 = v.join(" => ");
+       var join_result_4 = v.join(" # ");
+
+       console.log(join_result_1);
+       console.log(join_result_2);
+       console.log(join_result_3);
+       console.log(join_result_4);
+       
+
+
+
+
+
 
     </script>
 </body>

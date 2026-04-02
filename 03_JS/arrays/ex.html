@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arrays</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../assets/lib/normalize.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <script>
+        let x = [10,11,20,21,30,31,40,41,50,51,60,61,70,71,80,81,90,91,100];
+        x.forEach(function(item){
+            if(item % 2 == 0){
+                console.log(item + " is even number");
+            }else{
+                console.log(item + "is odd number");
+            }
+        });
+
+        console.log("==============================================================");
+
+        var a = ["A", "B", "C", "D", "E"];
+        console.log(a.reverse());
+
+        console.log("==============================================================");
+
+        var arr = [10,20,30,40,50,60,70,80,90,100];
+        arr.unshift(1000,200,3000,4000,5000);
+        console.log(arr);
+
+        console.log("==============================================================");
+
+        arr.map(function(item){
+            console.log(item);
+        });
+
+        var a = [11,20,14,1,81,31,50];
+        var newArr = a.filter(function(item){
+            return item % 2 == 0;
+        });
+        console.log("Even Array", newArr);
+
+        console.log("==============================================================");
+
+        a.map(function(item, index){
+            console.log("Index : " + index + " Item : " + item);
+        });
+    </script>
+</body>
+</html>
