@@ -94,6 +94,28 @@
         var result = findMul(10,20);
         console.log("Result " + result);
 
+
+        // =============== Functions Constructor ============================
+
+        var func = new Function("p" , "q" , "return p * q");  // fuctions contructor wala paramoters pass karanna ona | var func = new Function("p" , "q" , "return p * q")  | = 10 * 20 = 200
+        var result = func(10,20);
+        console.log("Result " + result); // 10 * 20 = 200
+
+        // =============== Callback Functions ============================
+
+        function K(hello){                          // cunction ekak athule fuction ekak call karanwa
+            console.log("I'm K: " + hello);
+        }
+        function L(){
+            console.log("I'm L");
+        }
+        function M(callback){
+            console.log("I'm M");
+            callback("Hello from M!");
+        }
+        M(K);
+        M(L);
+
     </script>
 </body>
 </html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Js Functions</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <script> 
+    //Case 01:    
+     function oddOrEven(num){
+        if(num % 2 == 0){
+            console.log(num + " is Even number");
+        }else{
+            console.log(num + " is  odd number");
+        }
+     }
+
+     oddOrEven(10);
+     oddOrEven(11);
+
+     console.log("-------------");
+
+
+        //Case 02:  
+        const findOddOrEven = function(num){
+            if(num % 2 == 0){
+                console.log(num + " is Even number");
+            }else{
+                console.log(num + " is  odd number");
+            }
+        }
+
+        findOddOrEven(10);
+        findOddOrEven(11);
+
+        console.log("-------------");
+
+        // case 03:
+        const oddOrEvenNum = (num) => {
+            if(num % 2 == 0){
+                console.log(num + " is Even number");
+            }else{
+                console.log(num + " is  odd number");
+            }
+        }
+
+        oddOrEvenNum(10);
+        oddOrEvenNum(11);
+
+        console.log("-------------");
+
+        //case 04:
+        const Factorial = function(num){
+            let result = 1;
+            for(let i=1; i<=num; i++){
+                result *= i;
+            }
+            return result;
+        }
+
+        console.log(Factorial(5)); 
+
+        console.log("-------------");
+
+        // case 05:
+        const factorial = (num) => { 
+            let result = 1;
+            for(let i=1; i<=num; i++){
+                result *= i;
+            }
+            return result;
+        }
+
+        console.log(factorial(5));
+    </script>
+</body>
+</html>
