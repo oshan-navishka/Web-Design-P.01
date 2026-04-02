@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arrays Methods</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../assets/lib/normalize.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <script> 
+       
+       let x = ["Mahinda", "Ranil", "Sajith", "Gotabaya", "Anura"];
+
+       // 01. push() method - add an item to the end of the array
+       x.push("Puthanoo");
+       console.log(x);          //  ['Mahinda', 'Ranil', 'Sajith', 'Gotabaya', 'Anura', 'Puthanoo']
+
+         // 02. pop() method - remove the last item from the array
+       x.pop();
+       console.log(x);  // ['Mahinda', 'Ranil', 'Sajith', 'Gotabaya', 'Anura']
+
+         // 03. shift() method - remove the first item from the array
+       x.shift();
+       console.log(x);     //  ['Ranil', 'Sajith', 'Gotabaya', 'Anura']
+
+        // 04. unshift() method - add an item to the beginning of the array
+       x.unshift("Nimal");
+       console.log(x);    //   ['Nimal', 'Ranil', 'Sajith', 'Gotabaya', 'Anura']
+        
+    </script>
+</body>
+</html>

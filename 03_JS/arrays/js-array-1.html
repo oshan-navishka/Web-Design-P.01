@@ -44,10 +44,37 @@
 
 
         x = [10,20,30,40,50, "Sri Lanka", function(){console.log("Hello, world!")},[100,200,300],true]; // array can contain any type of data
-        console.log(x);
-        console.log(x[0]); // 10
-        console.log(x[5]); // function     /*java vala wagema thamai index ekata call karanne*/
        
+    //    Array Item Read =========================
+
+        console.log(x);
+
+        console.log(x[0]); // 10
+
+        console.log(x[5]); // function     /*java vala wagema thamai index ekata call karanne*/
+
+        console.log(x[7][1]);
+
+        x[6](); // call the function
+
+        console.log("================================");
+       
+        // Update Index Item In Array =========================
+
+        x[0] = "NAVI";
+        console.log(x);      // (9) ['NAVI', 20, 30, 40, 50, 'Sri Lanka', ƒ, Array(3), true]
+
+        x[2] = ["A", "B", "C"];
+        console.log(x);      // (9) ['NAVI', 20, Array
+
+        console.log("================================");
+
+        // 2D Array =========================
+
+        let arr3 = [[10,20,30],[40,50,60],[70,80,90],["A","B","C"],[true,false,true],["Sri Lanka","India","Pakistan"]];
+        console.log(arr3);
+
+
     </script>
 </body>
 </html>
