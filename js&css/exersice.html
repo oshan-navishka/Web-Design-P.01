@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers Ex</title>
+
+    <style>
+
+        section {
+            display: flex;
+        }
+
+        div {
+            padding: 10px;
+            border: 3px solid darkblue;
+            background: lightskyblue;
+            border-radius: 10px;
+            margin: 5px;
+            font-size: 30px;
+            min-width: 40px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<section>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+
+</section>
+<script>
+    const boxes = document.querySelectorAll("section div");
+    const states = [
+        ["A", "B", "C" , "D" , "E"],
+        ["E", "A", "B" , "C", "D"],
+        ["D", "E" , "A", "B" , "C" ],
+        ["C", "D", "E" , "A" , "B"],
+        ["B", "C", "D" , "E" , "A"]
+    ];
+
+    let count = 0;
+
+    function auto() {
+        boxes.forEach((box, index) => {
+            box.textContent = states[count][index];
+        });
+    }
+
+    auto();
+
+    setInterval(() => {
+        count = (count + 1) % states.length;
+        auto();
+    }, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Timer</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../assets/lib/normalize.css">
+</head>
+<body>
+
+    <h1 id="topic">0</h1>
+    <button id="stop_btn">Stop</button>
+
+    
+    <script>
+        var num = 0;
+        var h1_element = document.getElementById("topic");
+        var stop_btn = document.getElementById("stop_btn");
+        //setTimeout(), setInterval()
+
+        setTimeout(() => {
+            console.log("Timeout!!!");
+        }, 8000);
+
+        setInterval(() => {
+            num+=1;
+            h1_element.textContent = num;
+        }, 1000);
+
+    </script>
+
+    
+</body>
+</html>
