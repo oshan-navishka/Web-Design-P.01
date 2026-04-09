@@ -35,29 +35,15 @@
 
 </section>
 <script>
-    const boxes = document.querySelectorAll("section div");
-    const states = [
-        ["A", "B", "C" , "D" , "E"],
-        ["E", "A", "B" , "C", "D"],
-        ["D", "E" , "A", "B" , "C" ],
-        ["C", "D", "E" , "A" , "B"],
-        ["B", "C", "D" , "E" , "A"]
-    ];
+    var list = ["A", "B", "C", "D", "E"];
 
-    let count = 0;
+    setInterval(() =>{
+        list.unshift(list.pop());
 
-    function auto() {
-        boxes.forEach((box, index) => {
-            box.textContent = states[count][index];
-        });
-    }
-
-    auto();
-
-    setInterval(() => {
-        count = (count + 1) % states.length;
-        auto();
-    }, 1000);
+        for(let i=0; i<list.length; i++){
+            document.getElementsByTagName("div")[i].innerText = list[i];
+        }
+    }, 800);
 </script>
 </body>
 </html>
