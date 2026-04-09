@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JS & CSS</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../assets/lib/normalize.css">
+
+    <style>
+        /* ol > li:first-child > div{
+            color: red;
+        }
+
+        ol > li:last-child div{
+            color: blue;
+        } */
+    </style>
+</head>
+<body>
+    <h1 id="topic">Course</h1>
+
+    <h2 name="subtopic1">HTML Courese</h2>
+    <p class="myClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odio quas magnam commodi nobis odit eaque obcaecati quos voluptatem praesentium quibusdam cupiditate perferendis iste, cum atque quasi ut nesciunt fuga.</p>
+
+    <h2 name="subtopic1">CSS Courese</h2>
+    <p class="myClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odio quas magnam commodi nobis odit eaque obcaecati quos voluptatem praesentium quibusdam cupiditate perferendis iste, cum atque quasi ut nesciunt fuga.</p>
+
+    <h2 name="subtopic1">JS Courese</h2>
+    <p class="myClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odio quas magnam commodi nobis odit eaque obcaecati quos voluptatem praesentium quibusdam cupiditate perferendis iste, cum atque quasi ut nesciunt fuga.</p>
+
+    <ol>
+        <li>
+            <div>A</div>
+        </li>
+        <li>
+            <div>B</div>
+        </li>
+        <li>
+            <div>C</div>
+        </li>
+    </ol>
+
+    <ul>
+        <li>
+            <div>D</div>
+        </li>
+        <li>
+            <div>E</div>
+        </li>
+        <li>
+            <div>F</div>
+        </li>
+    </ul>
+
+    <script>
+        //getElementById() method is used to select an element by its id attribute value
+        var h1_element = document.getElementById("topic");
+        h1_element.style.color = "red";
+
+        //getElementsByTagName() method is used to select elements by their tag name and it returns a collection of elements
+        var h2_element = document.getElementsByTagName("h2");
+        var first_h2_element = h2_element[0];
+        var second_h2_element = h2_element[1];
+        
+        first_h2_element.style.color = "pink";
+        second_h2_element.style.color = "blue";
+        h2_element[2].style.color = "green";    /*mehemath puluwan*/
+
+        //getElementsByClassName() method is used to select elements by their class name and it returns a collection of elements
+        var p_element = document.getElementsByClassName("myClass");
+        var firs_p_element = p_element[0];
+        var second_p_element = p_element[1];
+
+        firs_p_element.style.color = "purple";
+        second_p_element.style.color = "orange";
+        p_element[2].style.color = "gray";    /*mehemath puluwan*/
+
+        //getElemetsByName() method is used to select elements by their name attribute value and it returns a collection of elements
+        var subtopic1_element = document.getElementsByName("subtopic1");
+        var firs_subtopic_element = subtopic1_element[0];
+        var second_subtopic_element = subtopic1_element[1];
+
+        firs_subtopic_element.style.background = "black";
+        second_subtopic_element.style.background = "pink"
+        subtopic1_element[2].style.background = "orange";
+
+        //querySelector() method is used to select the first element that matches a specified CSS selector(s)
+
+    //     document.querySelector("ol > li:first-child > div").style.color = "red";  /*ekin ekata dna vidiha*/
+    //     document.querySelector("ol > li:last-child div").style.color = "blue";
+    //    // document.querySelector("ol").style.color = "green";    /*mulu ol ekatama dmmaki meehma*/
+
+        //querySelectorAll() method is used to select all elements that matches a specified CSS selector(s) and it returns a collection of elements
+        var div_element = document.querySelectorAll("li:first-child > div");
+        div_element[0].style.color = "red";
+        div_element[1].style.color = "blue";
+
+
+
+        
+        
+
+    </script>
+</body>
+</html>

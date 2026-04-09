@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JS & CSS</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../assets/lib/normalize.css">
+
+    <style>
+        /* #myDiv{
+            width: 200px;
+            height: 200px;                  css eke code eka mehema liayana ela js css walin liyana widiha
+            background-color: blue;
+        } */
+    </style>
+</head>
+<body>
+    <div id="myDiv"></div>
+
+    <script>
+        var myDiv_element = document.getElementById("myDiv");
+
+        // myDiv_element.style.width = "100px";       /* mehma liynna puluwn karadari*/
+        // myDiv_element.style.height = "100px";
+        // myDiv_element.style.backgroundColor = "red";
+
+        // var styles = "width: 200px; height: 200px; background-color: blue;";     /*mehemath liyanna puluwan tikak lesi*/
+        // myDiv_element.style.cssText = styles;
+
+        myDiv_element.style.cssText = "width: 200px; height: 200px; background-color: blue;";  /*lesima widiha mehama*/
+
+    </script>
+</body>
+</html>
