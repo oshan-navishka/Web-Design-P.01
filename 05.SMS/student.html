@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="Oshan-Navishka" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        .tabless {
+            margin-left: 500px;
+            margin-top: 50px;
+        }
+
+        .form-name {
+            justify-content: center;
+            text-align: center;
+            margin-top: 50px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">IJSE</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <aside class="position-fixed top-0 bottom-0 margin-auto w-25 bg-primary-subtle">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Instructors</a>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <h1 class="form-name">Student</h1>
+
+    <section class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <form class="border rounded p-3 bg-light">
+                    <div class="mb-3">
+                        <label for="studentId" class="form-label">ID</label>
+                        <input type="text" class="form-control" id="studentId" placeholder="Enter ID">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="studentName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="studentName" placeholder="Enter Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="studentNic" class="form-label">NIC</label>
+                        <input type="text" class="form-control" id="studentNic" placeholder="Enter NIC">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="studentPhone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="studentPhone" placeholder="Enter Phone">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="studentAddress" class="form-label">Address</label>
+                        <textarea class="form-control" id="studentAddress" rows="3" placeholder="Enter Address"></textarea>
+                    </div>
+
+                    <div class="text-end">
+                        <button type="button" class="btn btn-save" style="background-color: green;">Save</button>
+                        <button type="button" class="btn btn-update" style="background-color: blue;">Update</button>
+                        <button type="button" class="btn btn-delete" style="background-color: red;">Delete</button>
+                        <button type="reset" class="btn btn-outline-secondary ms-2" style="background-color: aqua; color: black;">Reset</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="tabless">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>NIC</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody">
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>901234567V</td>
+                    <td>0712345678</td>
+                    <td>123 Main Street</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>901234568V</td>
+                    <td>0712345679</td>
+                    <td>456 Elm Street</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bob Johnson</td>
+                    <td>901234569V</td>
+                    <td>0712345680</td>
+                    <td>789 Oak Street</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="../assets/lib/jquery-4.0.0.min.js"></script>
+
+    <script>
+
+        const nic_regex = new RegExp("^(([5,6,7,8,9]{1})([0-9]{1})([0,1,2,3,5,6,7,8]{1})([0-9]{6})([v|V|x|X]))|(([1,2]{1})([0,9]{1})([0-9]{2})([0,1,2,3,5,6,7,8]{1})([0-9]{7}))$");
+        const phone_number_regex = new RegExp("^([0]{1}[7]{1}[01245678]{1}[0-9]{7}$)");
+        
+        let sidebar_open = true;
+        $('#menu_btn').on('click', function () {
+            if(sidebar_open) {
+                $('#sidebar').css({display: 'none'});
+                $('#content').css({marginLeft: '0px'});
+                sidebar_open = false;
+            } else {
+                $('#sidebar').css({display: 'block'});
+                $('#content').css({marginLeft: '250px'});
+                sidebar_open = true;
+            }
+        })
+    // ------------------------ Sidebar Handler --------------------------
+
+    // ------------------------ Student Add Handler --------------------------
+    $('.btn-save').on('click', function () {
+
+        // Get form values
+        const studentId = $('#studentId').val();
+        const studentName = $('#studentName').val();
+        const studentNic = $('#studentNic').val();
+        const studentPhone = $('#studentPhone').val();
+        const studentAddress = $('#studentAddress').val();
+
+        // error showing
+        if (studentId == "") {
+            alert("ID is required");
+            return;
+        }
+        if (studentName == "") {
+            alert("Name is required");
+            return;
+        }
+        if (!nic_regex.test(studentNic)) {
+            alert("Invalid NIC Number");
+            return;
+        }
+        if (!phone_number_regex.test(studentPhone)) {
+            alert("Invalid Phone Number");
+            return;
+        }
+        if (studentAddress == "") {
+            alert("Address is required");
+            return;
+        }
+
+        // Create a new table row
+        const newRow = `
+            <tr>
+                <td>${studentId}</td>
+                <td>${studentName}</td>
+                <td>${studentNic}</td>
+                <td>${studentPhone}</td>
+                <td>${studentAddress}</td>
+            </tr>
+        `;
+
+        $('#studentTableBody').append(newRow);
+        alert("Student added successfully!");
+
+        // Clear form fields
+        $('#studentId').val('');
+        $('#studentName').val('');
+        $('#studentNic').val('');
+        $('#studentPhone').val('');
+        $('#studentAddress').val('');
+    });
+        
+    </script>
+</body>
+</html>

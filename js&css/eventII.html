@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../assets/lib/normalize.css">
+
+    <style>
+        #myDiv{
+            width: 300px;
+            aspect-ratio: 1/1;
+            background-color: lightblue;
+            border: 5px solid blue;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn">Click!</button>
+
+    <br>
+
+    <input id="msg_input" type="text">
+
+    <h1 id="msg"></h1>
+    
+    <div id="myDiv"></div>
+    <script>
+      /*event object*/
+      window.addEventListener("keydown", (event) => {
+        console.log("Key Down!!!", event);
+        if(event.key === "Enter"){
+            console.log("Hiii!!! Jiraff~!!");
+        }
+      });
+    </script>
+</body>
+</html>

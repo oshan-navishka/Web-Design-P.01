@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JQuery</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../assets/lib/normalize.css">
+    
+<body>
+
+    <h1>Hello world - I</h1>
+    <h1 id="myH1">Hello world - II</h1>
+    <h1 class="myH1Class">Hello world - III</h1>
+    <h1 class="myH1Class">Hello world - IV</h1>
+
+    <ol>
+        <li>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>JQuery</li>
+            </ul>
+        </li>
+        <li>Koltin</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>C++</li>
+    </ol>
+
+    <script src="../assets/lib/jquery-4.0.0.min.js"></script>
+
+    <script>
+        var r1 = $ ("h1");  /*get all h1 elements*/
+        var r2 = $ ("#myH1"); /*get element by id*/
+        var r3 = $ (".myH1Class"); /*get element by class*/
+
+        console.log(r1);
+        console.log(r2);
+        console.log(r3);
+
+        $("li").eq(4).css("color", "red");   /*list eken ekakakata color dmma*/
+
+        $('ol>li:first-child>ul>li:last-child').text("Hiiiiii");   /*text eka update karanwa*/
+
+        
+    </script>
+
+</body>
+</html>

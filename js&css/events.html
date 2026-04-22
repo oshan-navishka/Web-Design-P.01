@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../assets/lib/normalize.css">
+
+    <style>
+        #myDiv{
+            width: 300px;
+            aspect-ratio: 1/1;
+            background-color: lightblue;
+            border: 5px solid blue;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn">Click!</button>
+
+    <br>
+
+    <input id="msg_input" type="text">
+
+    <h1 id="msg"></h1>
+    
+    <div id="myDiv"></div>
+    <script>
+        /* Js evnt Listener is a function that waits for a specific event to occur on an HTML element */
+        
+        //<element>.addEventListener(<event_type>, <task a function);
+            document.getElementById("btn").addEventListener("click", () => {
+                console.log("Clicked!!!");
+            });
+
+            document.getElementById("btn").addEventListener("dblclick", () => {
+                console.log("DblClick!!!");
+            });
+
+            document.getElementById("msg_input").addEventListener("input",() => {
+                let msg = document.getElementById("msg_input").value;
+                console.log("Typing....", msg);
+                document.getElementById("msg").innerText = msg;
+            });
+
+            window.addEventListener("keydown",() => {   /*key ekak ebuwama console eke penawa*/
+                console.log("Key Down!!!");
+            });
+
+            window.addEventListener("keyup",() => {  /*key eka bola nawaththuwa,a key op kiyaal console eke watenwa*/
+                console.log("Key Up!!!");
+            });
+
+            window.addEventListener("keypress",() => { /*key eka press karama piliwelt enawa keydown / keypres/ keyup*/
+                console.log("Key Press!!!");
+            });
+
+            document.getElementById("myDiv").addEventListener("mouseover",() => {  /*mouse eka div ekata awama console eke penawa*/
+                console.log("Mouse Over!!!");
+            });
+
+            document.getElementById("myDiv").addEventListener("mouseenter",() =>{
+                console.log("Mouse Enter!!!");
+            });
+
+            document.getElementById("myDiv").addEventListener("mouseleave",() =>{ /*mouse eka bola nawaththuwa,a mouse op kiyaal console eke watenwa*/
+                console.log("Mouse Leave!!!");
+            });
+    </script>
+</body>
+</html>

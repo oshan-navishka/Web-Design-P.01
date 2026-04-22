@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>J_query</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../assets/lib/normalize.css">
+</head>
+<body>
+    <h1>Hellow World!</h1>
+    <h1>Hellow World!</h1>
+    <h3>Hellow World!</h3>
+    <script src="../assets/lib/jquery-4.0.0.min.js"></script>
+    <script>
+        // let h1_elements = $('h1');
+        // let h1_elements_1 = h1_elements[0];
+        // let h1_elements_2 = h1_elements[1]; 
+
+        // get element
+        // document.getElementsByTagName("h1")[0];
+        let h1_elements_1 = $('h1').eq(0);
+        let h1_elements_2 = $('h1').eq(1);
+
+        // get inner html
+            // document.getElementsByTagName("h1")[0].innerHTML;
+        let h1_html_1 = $('h1').eq(0).html();
+        let h1_html_2 = $('h1').eq(1).html();
+        console.log(h1_html_1);
+        console.log(h1_html_2);
+       
+        // get immer text
+        // document.getElementsByTagName("h1")[0].innerText;
+        let h1_text_1 = $('h1').eq(0).text();
+        let h1_text_2 = $('h1').eq(1).text();
+        console.log(h1_text_1);
+        console.log(h1_text_2);
+
+        // update inner text
+        // document.getElementsByTagName("h1")[0].innerText = "Updated Text";
+        $('h1').eq(0).text("Updated Text 1");
+        $('h1').eq(1).text("Updated Text 2");
+
+
+
+    </script>
+</body>
+</html>

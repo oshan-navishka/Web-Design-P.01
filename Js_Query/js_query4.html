@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JQuery</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../assets/lib/normalize.css">
+
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 234, 255);
+            border: 5px solid blue;
+        }
+    </style>
+    
+<body>
+
+    <button id="btn">Click</button>
+    <div id="box1"></div>
+    <input id="mgs" type="text">
+
+    <script src="../assets/lib/jquery-4.0.0.min.js"></script>
+
+    <script>
+        // document.getElementById("btn").addEventListener("click", () => {});
+        // document.getElementById("btn").addEventListener("click", function() {});
+
+        /*-------------------------------- Single clicked --------------------------------*/
+        $('#btn').on('click', function() {
+            console.log('Button clicked!');
+        });
+
+        /*-------------------------------- Double clicked --------------------------------*/
+        $('#btn').on('dblclick', function() {
+            console.log('Button double clicked!');
+        });
+
+        /*-------------------------------- Mouse Entered --------------------------------*/
+        $('#box1').on('mouseenter', function() {
+            console.log('Mouse entered the box!');
+        });
+
+        /*-------------------------------- Mouse Overed --------------------------------*/
+        $('#box1').on('mouseover', function() {
+            console.log('Mouse is over the box!');
+        });
+
+        /*-------------------------------- Mouse Down --------------------------------*/
+        $('#box1').on('mousedown', function() {
+            console.log('Mouse button is pressed down on the box!');
+        });
+
+        /*-------------------------------- Mouse Up --------------------------------*/
+        $('#box1').on('mouseup', function() {
+            console.log('Mouse button is released on the box!');
+        });
+
+        /*-------------------------------- focus --------------------------------*/
+        $('#mgs').on('focus', function() {
+            console.log('Input field is focused!');
+        });
+
+        /*-------------------------------- blur --------------------------------*/
+        $('#mgs').on('blur', function() {
+            console.log('Input field is blured!');
+        });
+
+        /*-------------------------------- keyDown --------------------------------*/
+        $('#mgs').on('keydown', function() {
+            console.log('Key down!');
+        });
+
+        /*-------------------------------- keyUp --------------------------------*/
+        $('#mgs').on('keyup', function() {
+            console.log('Key up!');
+        });
+
+        /*-------------------------------- keyPress --------------------------------*/
+        $('#mgs').on('keypress', function() {
+            console.log('Key press!');
+        });
+
+        /*-------------------------------- event object --------------------------------*/
+        $('#mgs').on('input', function(event) {
+            console.log('Input event:', event);
+        });
+    </script>
+
+</body>
+</html>
