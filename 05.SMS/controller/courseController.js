@@ -1,12 +1,15 @@
 import { course_db } from "../db/db.js";
 
+const courseScope = $('#courseSection').length ? '#courseSection ' : '';
+const courseResetButton = $('#courseSection').length ? '#course_btnReset' : '#btnReset';
+
 // ------------------------ Selected Course Index --------------------------
         let selected_index = -1;
 
 
 // ------------------------ Clean Course form --------------------------
         const clearForm = () => {
-            $('#btnReset').click();
+            $(courseResetButton).click();
             selected_index = -1;
         };
 
@@ -67,7 +70,7 @@ import { course_db } from "../db/db.js";
         });
 
 // ------------------------ Start : Course Add Handler -------------------------    
-        $('.btn-save').on('click', function () {
+        $(`${courseScope}.btn-save`).on('click', function () {
             const data = getFormData();
 
             if (!isValidFormData(data)) {
@@ -91,7 +94,7 @@ import { course_db } from "../db/db.js";
 
 
 // ------------------------ Start : Course Update Handler -------------------------
-        $('.btn-update').on('click', function () {
+        $(`${courseScope}.btn-update`).on('click', function () {
             if (selected_index === -1) {
                 Swal.fire({ icon: 'error', title: 'Oops...', text: 'Please select a course first!' });
                 return;
@@ -120,7 +123,7 @@ import { course_db } from "../db/db.js";
 
 
 // ------------------------ Start : Course Delete Handler -------------------------
-        $('.btn-delete').on('click', function () {
+        $(`${courseScope}.btn-delete`).on('click', function () {
             if (selected_index === -1) {
                 Swal.fire({ icon: 'error', title: 'Oops...', text: 'Please select a course first!' });
                 return;

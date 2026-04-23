@@ -1,12 +1,15 @@
 import { check_nic, check_phone_number } from "../util/regex_util.js";
 import { addStudentData, updateStudentData, deleteStudentData, getAllStudentData, getStudentDataByIndex, getStudentDataById } from "../model/StudentModel.js";
 
+const studentScope = $('#studentSection').length ? '#studentSection ' : '';
+const studentResetButton = $('#studentSection').length ? '#student_btnReset' : '#btnReset';
+
     // ------------------------ Selected Student Index --------------------------
         let selected_index = -1;
 
     // ------------------------ Clean Student form --------------------------
         const clearForm = () => {
-            $('#btnReset').click();
+            $(studentResetButton).click();
             selected_index = -1;
         }
 
@@ -42,7 +45,7 @@ import { addStudentData, updateStudentData, deleteStudentData, getAllStudentData
         });
 
     // ------------------------ Start : Student Add Handler -------------------------
-        $('.btn-save').on('click', function () {
+        $(`${studentScope}.btn-save`).on('click', function () {
 
             // Get form values
             const studentId = $('#studentId').val();
@@ -134,7 +137,7 @@ import { addStudentData, updateStudentData, deleteStudentData, getAllStudentData
 
 
     // ------------------------ Start : Student Update Handler -------------------------
-    $('.btn-update').on('click', function () {
+    $(`${studentScope}.btn-update`).on('click', function () {
 
         if (selected_index === -1) {
             Swal.fire({
@@ -222,7 +225,7 @@ import { addStudentData, updateStudentData, deleteStudentData, getAllStudentData
 
     
     // ------------------------ Start : Student Delete Handler -------------------------
-    $('.btn-delete').on('click', function () {
+    $(`${studentScope}.btn-delete`).on('click', function () {
 
         if (selected_index === -1) {
             Swal.fire({

@@ -15,4 +15,14 @@
             }
         });
 
+     $("#student_sidebar_tab").on("click", function () {
+        $("#studentSection").css({display: "block"});
+        $("#courseSection").css({display: "none"});
+    });
+
+    $("#course_sidebar_tab").on("click", function () {
+        $("#courseSection").css({display: "block"});
+        $("#studentSection").css({display: "none"});
+    });
+
   // ------------------------End : Sidebar Handler --------------------------

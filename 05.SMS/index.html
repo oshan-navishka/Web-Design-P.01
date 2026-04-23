@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="Oshan-Navishka" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        .tabless {
+            margin-left: 400px;
+            margin-top: 50px;
+        }
+
+        .form-name {
+            justify-content: center;
+            text-align: center;
+            margin-top: 0px;
+            font-family: monospace;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">IJSE</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <aside class="position-fixed top-0 bottom-0 margin-auto w-25 bg-primary-subtle">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <div class="nav-link active" aria-current="page">Dashboard</div>
+                </li>
+                <li class="nav-item" id="student_sidebar_tab">
+                    <div class="nav-link">Students</div>
+                </li>
+                <li class="nav-item" id="course_sidebar_tab">
+                     <div class="nav-link">Courses</div>
+                </li>
+                <li class="nav-item" id="instructor_sidebar_tab">
+                    <div class="nav-link">Instructors</div>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- STUDENT SECTION -->
+    <section id="studentSection" class="container mt-4">
+        <h1 class="form-name">Student</h1>
+        
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-7 col-lg-5">
+                <form class="border rounded p-3 bg-light">
+                    <div class="mb-3">
+                        <label for="studentId" class="form-label">ID</label>
+                        <input type="text" class="form-control" id="studentId" placeholder="Enter ID">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="studentName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="studentName" placeholder="Enter Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="studentNic" class="form-label">NIC</label>
+                        <input type="text" class="form-control" id="studentNic" placeholder="Enter NIC">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="studentPhone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="studentPhone" placeholder="Enter Phone">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="studentAddress" class="form-label">Address</label>
+                        <textarea class="form-control" id="studentAddress" rows="2" placeholder="Enter Address"></textarea>
+                    </div>
+
+                    <div class="text-end">
+                        <button type="button" class="btn btn-save" style="background-color: green; color: white;">Save</button>
+                        <button type="button" class="btn btn-update" style="background-color: blue; color: white;">Update</button>
+                        <button type="button" class="btn btn-delete" style="background-color: red; color: white;">Delete</button>
+                        <button type="reset" id = "student_btnReset" class="btn btn-outline-secondary ms-2" style="background-color: rgb(0, 6, 6); color: white;">Reset</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <section class="tabless">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>NIC</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody"></tbody>
+            </table>
+        </section>
+    </section>
+
+    <!-- COURSE SECTION -->
+    <section id="courseSection" class="container mt-4" style="display: none;">
+        <h1 class="form-name">Course</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-7 col-lg-5">
+                <form class="border rounded p-3 bg-light">
+                    <div class="mb-3">
+                        <label for="courseId" class="form-label">Course ID</label>
+                        <input type="text" class="form-control" id="courseId" placeholder="Enter Course ID">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="courseName" class="form-label">Course Name</label>
+                        <input type="text" class="form-control" id="courseName" placeholder="Enter Course Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="courseCode" class="form-label">Code</label>
+                        <input type="text" class="form-control" id="courseCode" placeholder="Enter Code">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="courseDuration" class="form-label">Duration</label>
+                        <input type="text" class="form-control" id="courseDuration" placeholder="Enter Duration">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="courseDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="courseDescription" rows="2" placeholder="Enter Description"></textarea>
+                    </div>
+
+                    <div class="text-end">
+                        <button type="button" class="btn btn-save" style="background-color: green; color: white;">Save</button>
+                        <button type="button" class="btn btn-update" style="background-color: blue; color: white;">Update</button>
+                        <button type="button" class="btn btn-delete" style="background-color: red; color: white;">Delete</button>
+                        <button type="reset" id="course_btnReset" class="btn btn-outline-secondary ms-2" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">Reset</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <section class="tabless">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Course ID</th>
+                        <th>Course Name</th>
+                        <th>Code</th>
+                        <th>Duration</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id="courseTableBody"></tbody>
+            </table>
+        </section>
+</section>
+
+    <script src="../assets/lib/jquery-4.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="controller/sidebarController.js"></script>
+
+    <script type="module" src="controller/studentContorller.js"></script>
+    <script type="module" src="controller/courseController.js"></script>
+
+</body>
+</html>
