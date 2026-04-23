@@ -109,21 +109,21 @@
                 </tr>
             </thead>
             <tbody id="studentTableBody">
-                <tr>
+                <tr data-index="1,John Doe,901234567V,0712345678,123 Main Street">
                     <td>1</td>
                     <td>John Doe</td>
                     <td>901234567V</td>
                     <td>0712345678</td>
                     <td>123 Main Street</td>
                 </tr>
-                <tr>
+                <tr data-index="2,Jane Smith,901234568V,0712345679,456 Elm Street">
                     <td>2</td>
                     <td>Jane Smith</td>
                     <td>901234568V</td>
                     <td>0712345679</td>
                     <td>456 Elm Street</td>
                 </tr>
-                <tr>
+                <tr data-index="3,Bob Johnson,901234569V,0712345680,789 Oak Street">
                     <td>3</td>
                     <td>Bob Johnson</td>
                     <td>901234569V</td>
@@ -155,7 +155,13 @@
         })
     // ------------------------ Sidebar Handler --------------------------
 
-    // ------------------------ Student Add Handler --------------------------
+    // ------------------------ Student Add Handler -------------------------
+
+    const addToStudentTbl = (id, name, nic, phone, address) => {
+        let data = `${id},${name},${nic},${phone},${address}`;
+        let new_row = `<tr data-index="${data}"> <td>${id}</td> <td>${name}</td> <td>${nic}</td> <td>${phone}</td> <td>${address}</td> </tr>`;
+        $('#studentTableBody').append(new_row);
+    }
     $('.btn-save').on('click', function () {
 
         // Get form values
@@ -187,18 +193,8 @@
             return;
         }
 
-        // Create a new table row
-        const newRow = `
-            <tr>
-                <td>${studentId}</td>
-                <td>${studentName}</td>
-                <td>${studentNic}</td>
-                <td>${studentPhone}</td>
-                <td>${studentAddress}</td>
-            </tr>
-        `;
-
-        $('#studentTableBody').append(newRow);
+        // Create and append a row with data-index payload
+        addToStudentTbl(studentId, studentName, studentNic, studentPhone, studentAddress);
         alert("Student added successfully!");
 
         // Clear form fields
@@ -208,6 +204,25 @@
         $('#studentPhone').val('');
         $('#studentAddress').val('');
     });
+
+    $('#studentTableBody').on('click', 'tr', function() {
+        let data = $(this).data('index');
+        let data_array = data.split(',');
+        console.log(data_array);
+
+        let id = data_array[0];
+        let name = data_array[1];
+        let nic = data_array[2];
+        let phone = data_array[3];
+        let address = data_array[4];
+
+        $('#studentId').val(id);
+        $('#studentName').val(name);
+        $('#studentNic').val(nic);
+        $('#studentPhone').val(phone);
+        $('#studentAddress').val(address);        
+    });
+        
         
     </script>
 </body>
