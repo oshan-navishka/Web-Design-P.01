@@ -26,6 +26,7 @@
             margin-top: 50px;
             font-family: monospace;
         }
+        
     </style>
 </head>
 <body>
@@ -87,10 +88,10 @@
                     </div>
 
                     <div class="text-end">
-                        <button type="button" class="btn btn-save" style="background-color: green;">Save</button>
-                        <button type="button" class="btn btn-update" style="background-color: blue;">Update</button>
-                        <button type="button" class="btn btn-delete" style="background-color: red;">Delete</button>
-                        <button type="reset" class="btn btn-outline-secondary ms-2" style="background-color: aqua; color: black;">Reset</button>
+                        <button type="button" class="btn btn-save" style="background-color: green; color: white;">Save</button>
+                        <button type="button" class="btn btn-update" style="background-color: blue; color: white;">Update</button>
+                        <button type="button" class="btn btn-delete" style="background-color: red; color: white;">Delete</button>
+                        <button type="reset" id = "btnReset" class="btn btn-outline-secondary ms-2" style="background-color: rgb(0, 6, 6); color: white;">Reset</button>
                     </div>
                     
                 </form>
@@ -108,122 +109,14 @@
                     <th>Address</th>
                 </tr>
             </thead>
-            <tbody id="studentTableBody">
-                <tr data-index="1,John Doe,901234567V,0712345678,123 Main Street">
-                    <td>1</td>
-                    <td>John Doe</td>
-                    <td>901234567V</td>
-                    <td>0712345678</td>
-                    <td>123 Main Street</td>
-                </tr>
-                <tr data-index="2,Jane Smith,901234568V,0712345679,456 Elm Street">
-                    <td>2</td>
-                    <td>Jane Smith</td>
-                    <td>901234568V</td>
-                    <td>0712345679</td>
-                    <td>456 Elm Street</td>
-                </tr>
-                <tr data-index="3,Bob Johnson,901234569V,0712345680,789 Oak Street">
-                    <td>3</td>
-                    <td>Bob Johnson</td>
-                    <td>901234569V</td>
-                    <td>0712345680</td>
-                    <td>789 Oak Street</td>
-                </tr>
-            </tbody>
+            <tbody id="studentTableBody"></tbody>
         </table>
     </section>
 
     <script src="../assets/lib/jquery-4.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script>
-
-        const nic_regex = new RegExp("^(([5,6,7,8,9]{1})([0-9]{1})([0,1,2,3,5,6,7,8]{1})([0-9]{6})([v|V|x|X]))|(([1,2]{1})([0,9]{1})([0-9]{2})([0,1,2,3,5,6,7,8]{1})([0-9]{7}))$");
-        const phone_number_regex = new RegExp("^([0]{1}[7]{1}[01245678]{1}[0-9]{7}$)");
-        
-        let sidebar_open = true;
-        $('#menu_btn').on('click', function () {
-            if(sidebar_open) {
-                $('#sidebar').css({display: 'none'});
-                $('#content').css({marginLeft: '0px'});
-                sidebar_open = false;
-            } else {
-                $('#sidebar').css({display: 'block'});
-                $('#content').css({marginLeft: '250px'});
-                sidebar_open = true;
-            }
-        })
-    // ------------------------ Sidebar Handler --------------------------
-
-    // ------------------------ Student Add Handler -------------------------
-
-    const addToStudentTbl = (id, name, nic, phone, address) => {
-        let data = `${id},${name},${nic},${phone},${address}`;
-        let new_row = `<tr data-index="${data}"> <td>${id}</td> <td>${name}</td> <td>${nic}</td> <td>${phone}</td> <td>${address}</td> </tr>`;
-        $('#studentTableBody').append(new_row);
-    }
-    $('.btn-save').on('click', function () {
-
-        // Get form values
-        const studentId = $('#studentId').val();
-        const studentName = $('#studentName').val();
-        const studentNic = $('#studentNic').val();
-        const studentPhone = $('#studentPhone').val();
-        const studentAddress = $('#studentAddress').val();
-
-        // error showing
-        if (studentId == "") {
-            alert("ID is required");
-            return;
-        }
-        if (studentName == "") {
-            alert("Name is required");
-            return;
-        }
-        if (!nic_regex.test(studentNic)) {
-            alert("Invalid NIC Number");
-            return;
-        }
-        if (!phone_number_regex.test(studentPhone)) {
-            alert("Invalid Phone Number");
-            return;
-        }
-        if (studentAddress == "") {
-            alert("Address is required");
-            return;
-        }
-
-        // Create and append a row with data-index payload
-        addToStudentTbl(studentId, studentName, studentNic, studentPhone, studentAddress);
-        alert("Student added successfully!");
-
-        // Clear form fields
-        $('#studentId').val('');
-        $('#studentName').val('');
-        $('#studentNic').val('');
-        $('#studentPhone').val('');
-        $('#studentAddress').val('');
-    });
-
-    $('#studentTableBody').on('click', 'tr', function() {
-        let data = $(this).data('index');
-        let data_array = data.split(',');
-        console.log(data_array);
-
-        let id = data_array[0];
-        let name = data_array[1];
-        let nic = data_array[2];
-        let phone = data_array[3];
-        let address = data_array[4];
-
-        $('#studentId').val(id);
-        $('#studentName').val(name);
-        $('#studentNic').val(nic);
-        $('#studentPhone').val(phone);
-        $('#studentAddress').val(address);        
-    });
-        
-        
-    </script>
+    <script src="controller/sidebarController.js"></script>
+    <script src="controller/studentContorller.js"></script>
 </body>
 </html>

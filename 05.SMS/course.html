@@ -62,8 +62,8 @@
             <div class="col-12 col-md-8 col-lg-6">
                 <form class="border rounded p-3 bg-light">
                     <div class="mb-3">
-                        <label for="studentId" class="form-label">Student ID</label>
-                        <input type="text" class="form-control" id="studentId" placeholder="Enter Student ID">
+                        <label for="courseId" class="form-label">Course ID</label>
+                        <input type="text" class="form-control" id="courseId" placeholder="Enter Course ID">
                     </div>
 
                     <div class="mb-3">
@@ -87,10 +87,10 @@
                     </div>
 
                     <div class="text-end">
-                        <button type="button" class="btn btn-save" style="background-color: green;">Save</button>
-                        <button type="button" class="btn btn-update" style="background-color: blue;">Update</button>
-                        <button type="button" class="btn btn-delete" style="background-color: red;">Delete</button>
-                        <button type="reset" class="btn btn-outline-secondary ms-2" style="background-color: aqua; color: black;">Reset</button>
+                        <button type="button" class="btn btn-save" style="background-color: green; color: white;">Save</button>
+                        <button type="button" class="btn btn-update" style="background-color: blue; color: white;">Update</button>
+                        <button type="button" class="btn btn-delete" style="background-color: red; color: white;">Delete</button>
+                        <button type="reset" id="btnReset" class="btn btn-outline-secondary ms-2" style="background-color: aqua; color: black;">Reset</button>
                     </div>
                     
                 </form>
@@ -101,91 +101,21 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Student ID</th>
+                    <th>Course ID</th>
                     <th>Course Name</th>
                     <th>Code</th>
                     <th>Duration</th>
                     <th>Description</th>
                 </tr>
             </thead>
-            <tbody id="courseTableBody">
-                <tr>
-                    <td>1</td>
-                    <td>Mathematics</td>
-                    <td>MATH101</td>
-                    <td>12 weeks</td>
-                    <td>Introductory mathematics course</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Physics</td>
-                    <td>PHYS101</td>
-                    <td>12 weeks</td>
-                    <td>Basic physics principles</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Chemistry</td>
-                    <td>CHEM101</td>
-                    <td>12 weeks</td>
-                    <td>Introduction to chemistry</td>
-                </tr>
-            </tbody>
+            <tbody id="courseTableBody"></tbody>
         </table>
     </section>
 
     <script src="../assets/lib/jquery-4.0.0.min.js"></script>
-
-    <script>
-        const courseCodeRegex = /^[A-Za-z]{2,6}[0-9]{2,4}$/;
-
-        $('.btn-save').on('click', function () {
-            const studentId = $('#studentId').val().trim();
-            const courseName = $('#courseName').val().trim();
-            const courseCode = $('#courseCode').val().trim();
-            const courseDuration = $('#courseDuration').val().trim();
-            const courseDescription = $('#courseDescription').val().trim();
-
-            if (studentId === '') {
-                alert('Student ID is required');
-                return;
-            }
-            if (courseName === '') {
-                alert('Course Name is required');
-                return;
-            }
-            if (!courseCodeRegex.test(courseCode)) {
-                alert('Invalid Course Code (e.g., CS101)');
-                return;
-            }
-            if (courseDuration === '') {
-                alert('Duration is required');
-                return;
-            }
-            if (courseDescription === '') {
-                alert('Description is required');
-                return;
-            }
-
-            const newRow = `
-                <tr>
-                    <td>${studentId}</td>
-                    <td>${courseName}</td>
-                    <td>${courseCode}</td>
-                    <td>${courseDuration}</td>
-                    <td>${courseDescription}</td>
-                </tr>
-            `;
-
-            $('#courseTableBody').append(newRow);
-            alert('Course added successfully!');
-
-            $('#studentId').val('');
-            $('#courseName').val('');
-            $('#courseCode').val('');
-            $('#courseDuration').val('');
-            $('#courseDescription').val('');
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="controller/courseController.js"></script>
+    <script src="controller/sidebarController.js"></script>
 </body>
 </html>

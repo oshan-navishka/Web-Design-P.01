@@ -21,13 +21,112 @@
             this.grade = grade;
         }
 
-       let p = new Student('Oshan', 22, 'A');   //  darta ekak add kara
+       let s = new Student('Oshan', 22, 'A');   //  darta ekak add kara
 
-       console.log(p);   // data okkoma console eke ganna
-       console.log(p.name);  // name eka console eke ganna
+       console.log(s);   // data okkoma console eke ganna
+       console.log(s.name);  // name eka console eke ganna
 
-       p.name = 'Navishka';   // name eka update karanna
+       s.name = 'Navishka';   // name eka update karanna
+       console.log(s.name);
+
+       function Person(name, age) {
+        this._name = name;
+        this._age = age;   // do not to do this. _ mean it is a private attribute
+       }
+
+       let p = new Person('John', 30);
+
+       console.log(p);
        console.log(p.name);
+        
+       /*
+       =============================================
+       this._name = name; menna me wge unde scode ekak dala thibboth developer hdla thiyenne meke privte data attribute 
+       ekak kiyana widihata but aththatama ejhma private ekiyala ekak na ek hadagena thiyenne developersla visimai ithin e kramaya 
+       digatama use karanw
+       =============================================*/
+
+       p._name = 'Suranga';
+       console.log(p);
+
+       // class syntax =========================================================
+
+       class Stu {
+        #fname;
+        #lname;     //  # ganne class ekak athule privte ewat witharai eka class ekein eliye access karanna ba.....
+        #age;
+
+        constructor (fname, lname, age) {
+        this.#fname = fname;
+        this.#lname = lname;
+        this.#age = age;
+       }
+
+       // get / set 
+
+       get fname() {
+            return this.#fname;
+       }
+
+       set fname(fname) {
+            this.#fname = fname;
+       }
+
+       get lname() {
+            return this.#lname;
+       }
+
+        set lname(lname) {
+            this.#lname = lname;
+        }
+
+        get age() {
+            return this.#age;
+        }
+
+        set age(age) {
+            this.#age = age;
+        }
+       }
+
+       let s1 = new Stu('Oshan', 'Perera', 22);
+       console.log(s1);
+
+       console.log(s1.fname);  // get method eka call karanna
+
+         s1.fname = 'Navishka';  // set method eken nama edite karanwa
+         console.log(s1.fname);
+
+         s1.lname = 'Byee';
+         console.log(s1.lname);
+
+        // Object literal syntax =========================================================
+
+        let car = {
+            make: 'Toyota',
+            model: 'Corolla',
+            year: 2020
+        }
+
+        let car2 = {
+            make: 'Honda',
+            model: 'Civic',
+            Brake: 'ABS',
+            year: 2021
+        };
+
+        console.log(car);
+        console.log(car2);
+
+        console.log(car.make);
+        console.log(car['model']);      //   [] mehemath attribute console eke bluweki
+        console.log(car.year);
+        console.log(car2.Brake);
+
+        car.year = 2022;   // car object eke year property eka update karanna
+        console.log(car.year);
+    
+       
     </script>
 </body>
 </html>
