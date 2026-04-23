@@ -1,6 +1,4 @@
-// ------------------------ Course DB --------------------------
-        let course_db = [];
-
+import { course_db } from "../db/db";
 // ------------------------ Selected Course Index --------------------------
         let selected_index = -1;
 

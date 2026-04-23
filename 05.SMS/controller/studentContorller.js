@@ -1,6 +1,4 @@
-    // ------------------------ Student DB --------------------------
-        let student_db = [];
-
+import { student_db } from "../db/db";
     // ------------------------ Selected Student Index --------------------------
         let selected_index = -1;
 
