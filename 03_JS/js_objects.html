@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="World best web development tutorials">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>js objects</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+</head>
+<body>
+    <script>
+        function Student(name, age, grade) {  // constructor kenek hduwa
+            this.name = name;
+            this.age = age;
+            this.grade = grade;
+        }
+
+       let p = new Student('Oshan', 22, 'A');   //  darta ekak add kara
+
+       console.log(p);   // data okkoma console eke ganna
+       console.log(p.name);  // name eka console eke ganna
+
+       p.name = 'Navishka';   // name eka update karanna
+       console.log(p.name);
+    </script>
+</body>
+</html>
