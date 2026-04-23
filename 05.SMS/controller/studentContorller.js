@@ -1,5 +1,5 @@
-import { student_db } from "../db/db.js";
 import { check_nic, check_phone_number } from "../util/regex_util.js";
+import { addStudentData, updateStudentData, deleteStudentData, getAllStudentData, getStudentDataByIndex, getStudentDataById } from "../model/StudentModel.js";
 
     // ------------------------ Selected Student Index --------------------------
         let selected_index = -1;
@@ -15,7 +15,7 @@ import { check_nic, check_phone_number } from "../util/regex_util.js";
 
             $('#studentTableBody').empty();
 
-            student_db.map(item => {
+            getAllStudentData().map(item => {
                 let data = `${item.id},${item.name},${item.nic},${item.phone},${item.address}`;
                 let new_row = `<tr data-index="${data}"> <td>${item.id}</td> <td>${item.name}</td> <td>${item.nic}</td> <td>${item.phone}</td> <td>${item.address}</td> </tr>`;
                 $('#studentTableBody').append(new_row);
@@ -26,11 +26,15 @@ import { check_nic, check_phone_number } from "../util/regex_util.js";
     // ------------------------ Click on student Row -------------------------
         $('#studentTableBody').on('click', 'tr', function() {
 
-            let index = $(this).index();
+            const index = $(this).index();
             selected_index = index;
-            let student_obj = student_db[index];        // let student_obj = student_db[$(this).index()];    meham optimise karala dnn apuluwan
+            const student_obj = getStudentDataByIndex(index);
 
-            $('#studentId').val(student_obj.id);        // $('#studentId').val(student_db[$(this).index()].id);   meham optimise karala dnn apuluwan
+            if (!student_obj) {
+                return;
+            }
+
+            $('#studentId').val(student_obj.id);
             $('#studentName').val(student_obj.name);
             $('#studentNic').val(student_obj.nic);
             $('#studentPhone').val(student_obj.phone);
@@ -39,8 +43,6 @@ import { check_nic, check_phone_number } from "../util/regex_util.js";
 
     // ------------------------ Start : Student Add Handler -------------------------
         $('.btn-save').on('click', function () {
-
-            
 
             // Get form values
             const studentId = $('#studentId').val();
@@ -59,7 +61,7 @@ import { check_nic, check_phone_number } from "../util/regex_util.js";
                 });
                 return;
             }
-            if (student_db.some(item => item.id === studentId)) {
+            if (getStudentDataById(studentId)) {
                 Swal.fire({
                     icon: "error",
                     title: "Oops...",
@@ -116,20 +118,9 @@ import { check_nic, check_phone_number } from "../util/regex_util.js";
                 return;
             }
 
-            const addStudebtData = (studentId, studentName, studentNic, studentPhone, studentAddress) => {
-                let new_student = {
-                    id: studentId,
-                    name: studentName,
-                    nic: studentNic,
-                    phone: studentPhone,
-                    address: studentAddress
-                };
-                student_db.push(new_student);
-                loadStudentTbl();
-            }
-
             // data tika array ekakin dna widiha
-            addStudebtData(studentId, studentName, studentNic, studentPhone, studentAddress);
+            addStudentData(studentId, studentName, studentNic, studentPhone, studentAddress);
+            loadStudentTbl();
             Swal.fire({
                 position: "justify-center",
                 icon: "success",
@@ -160,6 +151,8 @@ import { check_nic, check_phone_number } from "../util/regex_util.js";
         const studentNic = $('#studentNic').val();
         const studentPhone = $('#studentPhone').val();
         const studentAddress = $('#studentAddress').val();
+
+        const currentStudent = getStudentDataByIndex(selected_index);
         
 
         // error showing
@@ -171,8 +164,8 @@ import { check_nic, check_phone_number } from "../util/regex_util.js";
             });
             return;
         }
-        if (studentId !== student_db[selected_index].id) {
-            if (student_db.some(item => item.id === studentId)) {
+        if (studentId !== currentStudent.id) {
+            if (getStudentDataById(studentId)) {
                 Swal.fire({
                     icon: "error",
                     title: "Oops...",
@@ -214,14 +207,7 @@ import { check_nic, check_phone_number } from "../util/regex_util.js";
             return;
         }
 
-        let student_obj = student_db[selected_index];
-
-        student_obj.id = studentId;
-        student_obj.name = studentName;
-        student_obj.nic = studentNic;
-        student_obj.phone = studentPhone;
-        student_obj.address = studentAddress;
-
+        updateStudentData(selected_index, studentId, studentName, studentNic, studentPhone, studentAddress);
         loadStudentTbl();
         Swal.fire({
             position: "justify-center",
@@ -247,7 +233,7 @@ import { check_nic, check_phone_number } from "../util/regex_util.js";
             return;
         }
 
-        student_db.splice(selected_index, 1);
+        deleteStudentData(selected_index);
         loadStudentTbl();
         Swal.fire({
             position: "justify-center",
