@@ -1,10 +1,8 @@
-import { student_db } from "../db/db";
+import { student_db } from "../db/db.js";
+import { check_nic, check_phone_number } from "../util/regex_util.js";
+
     // ------------------------ Selected Student Index --------------------------
         let selected_index = -1;
-
-    // ------------------------ Regex --------------------------
-        const nic_regex = new RegExp("^(([5,6,7,8,9]{1})([0-9]{1})([0,1,2,3,5,6,7,8]{1})([0-9]{6})([v|V|x|X]))|(([1,2]{1})([0,9]{1})([0-9]{2})([0,1,2,3,5,6,7,8]{1})([0-9]{7}))$");
-        const phone_number_regex = new RegExp("^([0]{1}[7]{1}[01245678]{1}[0-9]{7}$)");
 
     // ------------------------ Clean Student form --------------------------
         const clearForm = () => {
@@ -93,7 +91,7 @@ import { student_db } from "../db/db";
                 });
                 return;
             }
-            if (!nic_regex.test(studentNic)) {
+            if (!check_nic(studentNic)) {
                 Swal.fire({
                     icon: "error",
                     title: "Oops...",
@@ -101,7 +99,7 @@ import { student_db } from "../db/db";
                 });
                 return;
             }
-            if (!phone_number_regex.test(studentPhone)) {
+            if (!check_phone_number(studentPhone)) {
                 Swal.fire({
                     icon: "error",
                     title: "Oops...",
@@ -191,7 +189,7 @@ import { student_db } from "../db/db";
             });
             return;
         }
-        if (!nic_regex.test(studentNic)) {
+        if (!check_nic(studentNic)) {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
@@ -199,7 +197,7 @@ import { student_db } from "../db/db";
             });
             return;
         }
-        if (!phone_number_regex.test(studentPhone)) {
+        if (!check_phone_number(studentPhone)) {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",

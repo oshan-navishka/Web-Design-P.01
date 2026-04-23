@@ -1,4 +1,5 @@
-import { course_db } from "../db/db";
+import { course_db } from "../db/db.js";
+
 // ------------------------ Selected Course Index --------------------------
         let selected_index = -1;
 
