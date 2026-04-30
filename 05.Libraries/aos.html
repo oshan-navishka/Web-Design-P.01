@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- step 01: Include AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        div {
+            width: 300px;
+            padding: 20px;
+            background-color: rgb(240, 240, 240);
+            border: 1px solid rgb(200, 200, 200);
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- step 04 : Include AOS JS  <div data-aos="flip-left"></div> -->
+    <div data-aos="flip-left">  
+        <h1>Title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </div>
+    
+    <div data-aos="fade-down">
+        <h1>Title2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </div>
+
+    <div data-aos="fade-left">
+        <h1>Title3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </div>
+
+        <div data-aos="fade-right">
+            <h1>Title4</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+        </div>
+
+    <div data-aos="fade-up">
+        <h1>Title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </div>
+    
+    <div data-aos="fade-down">
+        <h1>Title2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </div>
+
+    <div data-aos="fade-left">
+        <h1>Title3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </div>
+
+    <div data-aos="fade-right">
+        <h1>Title4</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </div>
+
+
+    <!-- step 02: Include AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- step 03: Initialize AOS -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
