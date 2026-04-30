@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="1">
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>PostID</th>
+            <th>Email</th>
+            <th>Comment</th>
+        </thead>
+        <tbody id="comment_tbody"></tbody>
+        <!-- <tr><td>1</td><td>Oshan</td><td>01</td><td>oshan@gmail.com</td><td>Good</td></tr> -->
+
+    </table>
+
+    <script src="../assets/lib/jquery-4.0.0.min.js"></script>
+    <script>
+        //jsone website eke thiyana data 500k api project ekata gennala ewage nam witharak print wenna hduna widiha 
+        fetch("https://jsonplaceholder.typicode.com/comments")
+        .then((Response)=> Response.json())
+        .then((data) => {
+            // console.log(data);
+            data.map((item , index)=> {
+                console.log(item.name);
+                let new_row = `<tr><td>${item.id}</td><td>${item.name}</td><td>${item.postId}</td><td>${item.email}</td><td>${item.body}</td></tr>`;
+                $("#comment_tbody").append(new_row);    
+            });
+        });
+    </script>
+</body>
+</html>

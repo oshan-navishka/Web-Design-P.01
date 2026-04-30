@@ -79,17 +79,23 @@
     // ============================ Abstraction ================================
     // Abstraction is the process of hiding the internal details of an object and only exposing a public interface
 
-        class BankAccount {
-            #balance; // private property
-            constructor(balance) {
-                this.#balance = balance;
+        class Vehicle {
+            start() {
+                this.#cheackEngine();
+                console.log("Vehicle is starting...");
             }
-            getBalance() {
-                return this.#balance;
+
+            #cheackEngine() {
+                console.log("Checking engine...");
+                console.log("Checking Sensor 1...");
+                console.log("Checking Sensor 2...");
+                console.log("Checking Sensor 3...");
+                console.log("Checking Fuel...");
             }
         }
-        let account = new BankAccount(2000);
-        console.log(account.getBalance()); // 2000
+
+        var v = new Vehicle();
+        v.start(); // Vehicle is starting...
 
 
     </script>
