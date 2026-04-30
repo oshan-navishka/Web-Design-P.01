@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Concept in JS</title>
+</head>
+<body>
+
+    <!-- ============================== Encapsulation ==============================
+    Encapsulation is the process of hiding the internal details of an object and only exposing a public -->
+
+    <script>
+        class Person {
+        #name; // private property
+        #age;  // private property
+        constructor(name, age) {
+            this.name = name; // public property
+            this.age = age;   // public property
+        }
+
+        get name() {
+            return this.#name;
+        }
+        set name(name) {
+            this.#name = name;
+        }
+        get age() {
+            return this.#age;
+        }
+        set age(age) {
+            this.#age = age;
+        }
+    }
+
+    let p = new Person("John", 30);
+    console.log(p.name); // John
+    console.log(p.age);  // 30
+    
+
+    // =========================== Inheritance ================================
+    // Inheritance is the process of creating a new class that is a child of an existing
+
+    class Animal {
+        eat() {
+            console.log("Eating...");
+        }
+    }
+    class Dog extends Animal {
+        bark() {
+            console.log("Barking...");
+        }
+    } 
+     
+    var d = new Dog();
+    d.bark(); // Barking...
+    d.eat();  // Eating...
+
+
+    // ================================= Polymorphism ================================
+    // Polymorphism is the ability of an object to take on many forms. It allows us to use a single interface to represent different types of objects.
+
+    function startMove(obj){
+        obj.move();
+    }
+
+    var car = {
+        move: () => console.log("Car is moving...")
+    }
+
+    var bike = {
+        move: () => console.log("Bike is moving...")
+    }
+
+    startMove(car);  // Car is moving...
+    startMove(bike); // Bike is moving...
+
+
+    // ============================ Abstraction ================================
+    // Abstraction is the process of hiding the internal details of an object and only exposing a public interface
+
+        class BankAccount {
+            #balance; // private property
+            constructor(balance) {
+                this.#balance = balance;
+            }
+            getBalance() {
+                return this.#balance;
+            }
+        }
+        let account = new BankAccount(2000);
+        console.log(account.getBalance()); // 2000
+
+
+    </script>
+    
+</body>
+</html>
