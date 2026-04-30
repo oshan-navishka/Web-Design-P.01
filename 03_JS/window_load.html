@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Load</title>
+</head>
+<body>
+    <script src="../assets/lib/jquery-4.0.0.min.js"></script>
+    <script>
+        $(window).on('load', function(){
+            console.log("Window is loaded!");  // this code will run when the entire page (including images, iframes, etc.) is fully loaded
+        });
+
+        window.addEventListener("load", function(){
+            console.log("Window is loaded!");  // this is a pure JavaScript way to do the same thing
+        });
+    </script>
+</body>
+</html>
