@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Storages</title>
+</head>
+<body>
+    <script src="../assets/lib/jquery-4.0.0.min.js"></script>
+    
+    <!-- Cookies danna meka plugin karanaganna oni -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.5/js.cookie.min.js"></script>
+    <script>
+
+        // ==================== Local Storage ===================
+
+        localStorage.setItem("UserName", "Oshan");
+        console.log(localStorage.getItem("UserName")); // Oshan
+
+        localStorage.setItem("contact", "1234567890");
+        console.log(localStorage.getItem("contact")); // 1234567890
+
+        localStorage.setItem("email", "oshan@gmail");
+        console.log(localStorage.getItem("email")); // oshan@gmail
+
+        localStorage.setItem("age", "30");
+        console.log(localStorage.getItem("age")); // 30
+
+        localStorage.setItem("country", "Sri Lanka");
+        console.log(localStorage.getItem("country")); // Sri Lanka
+
+        localStorage.removeItem("age");
+        console.log(localStorage.getItem("age")); // null
+
+        // ==================== Session Storage ===================
+
+        sessionStorage.setItem("UserName", "Oshan");
+        console.log(sessionStorage.getItem("UserName")); // Oshan
+
+        sessionStorage.setItem("contact", "1234567890");
+        console.log(sessionStorage.getItem("contact")); // 1234567890
+
+        sessionStorage.setItem("email", "oshan@gmail");
+        console.log(sessionStorage.getItem("email")); // oshan@gmail
+
+        sessionStorage.setItem("age", "30");
+        console.log(sessionStorage.getItem("age")); // 30
+
+        sessionStorage.setItem("country", "Sri Lanka");
+        console.log(sessionStorage.getItem("country")); // Sri Lanka
+
+        sessionStorage.removeItem("age");
+        console.log(sessionStorage.getItem("age")); // null
+
+        // ==================== Cookie Storage ===================
+
+        Cookies.set("email", "naivi@gmail.com", { expires: 7 }); // expires in 7 days
+        console.log(Cookies.get("email")); // "naivi@gmail.com"
+
+        Cookies.set("username", "Naivi", { expires: 7 });
+        console.log(Cookies.get("username")); // "Naivi"
+
+        Cookies.set("age", "25", { expires: 7 });
+        console.log(Cookies.get("age")); // "25"
+
+        Cookies.set("country", "India", { expires: 7 });
+        console.log(Cookies.get("country")); // "India"
+
+        Cookies.remove("country");
+        console.log(Cookies.get("country")); // undefined
+
+    </script>
+
+</body>
+</html>
