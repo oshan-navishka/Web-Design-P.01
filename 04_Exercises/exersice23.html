@@ -21,14 +21,16 @@
 
         }
         section div {
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            aspect-ratio: 4/1;
             background-color: rgb(0, 0, 0);
             border: 2px solid rgb(255, 0, 0);
         }
 
         section div:nth-child(1) {
             background-color: white;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
         }
         section div:nth-child(2) {
             background-color: rgb(224, 114, 114);
@@ -42,6 +44,10 @@
         section div:nth-child(5) {
             background-color: rgb(255, 0, 0);
             box-shadow: 0 2px 10px 5px rgb(255, 0, 0);
+        }
+        section div:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
     </style>
 </head>
@@ -69,47 +75,63 @@
         <div></div>
         <div></div>
         <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
         
     </section>
 
     <script src="../assets/lib/jquery-4.0.0.min.js"></script>
     <script>
-        $(document).ready(function(){
-            
-            const divs = document.querySelectorAll("section div");
+    $(document).ready(function () {
 
-            let index = 0;
-            let direction = 1;
+        const $divs = $("section div");
 
-            setInterval(() => {
+        let index = 0;
+        let direction = 1;
 
-                divs.forEach(div => {
-                    div.style.backgroundColor = "black";
-                    div.style.boxShadow = "none";
-                });
+        setInterval(function () {
 
-                divs[index].style.backgroundColor = "red";
-                divs[index].style.boxShadow = "0 0 20px red";
+            $divs.css({
+                backgroundColor: "black",
+                boxShadow: "none"
+            });
 
-                for (let i = 1; i <= 4; i++) {
-                    let pos = index - (i * direction);
+            $divs.eq(index).css({
+                backgroundColor: "red",
+                boxShadow: "0 0 20px red"
+            });
 
-                    if (divs[pos]) {
-                        if (i === 1) divs[pos].style.backgroundColor = "rgb(225, 30, 30)";
-                        if (i === 2) divs[pos].style.backgroundColor = "rgb(234, 56, 56)";
-                        if (i === 3) divs[pos].style.backgroundColor = "rgb(224, 114, 114)";
-                        if (i === 4) divs[pos].style.backgroundColor = "white";
+            for (let i = 1; i <= 4; i++) {
+                let pos = index - (i * direction);
+
+                if (pos >= 0 && pos < $divs.length) {
+
+                    if (i === 1) {
+                        $divs.eq(pos).css("backgroundColor", "rgb(225, 30, 30)");
+                    }
+                    if (i === 2) {
+                        $divs.eq(pos).css("backgroundColor", "rgb(234, 56, 56)");
+                    }
+                    if (i === 3) {
+                        $divs.eq(pos).css("backgroundColor", "rgb(224, 114, 114)");
+                    }
+                    if (i === 4) {
+                        $divs.eq(pos).css("backgroundColor", "white");
                     }
                 }
+            }
 
-                index += direction;
+            index += direction;
 
-                if (index === divs.length - 1 || index === 0) {
-                    direction *= -1;
-                }
+            if (index === $divs.length - 1 || index === 0) {
+                direction *= -1;
+            }
 
-            }, 40);
-        });
+        }, 30);
+
+    });
     </script>
 
 
